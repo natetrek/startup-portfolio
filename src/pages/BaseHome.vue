@@ -12,7 +12,7 @@
             <div class="prose pb-10">
               Hi, I'm Nate. Thanks for stopping by. Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Ipsum dolores officia praesentium quasi eius? Lorem ipsum dolor sit amet consectetur adipisicing
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="/treks/how-to-get-better-at-coding/">Flex.io</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="https://flexio.natewilliams.tech" target="_blank">@flex.io</a>
             </div>
             <SocialMediaLinks class="pb-16" />
             <button class="section-btn hover:bg-blue-400 hover:bg-opacity-20" @click="btnSendEmail">Get in touch</button>
