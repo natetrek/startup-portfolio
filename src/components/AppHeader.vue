@@ -1,5 +1,5 @@
 <template>
-    <header class="top-0 left-0 z-40 fixed bg-white w-full border-t-7 border-blue">
+    <header class="top-0 left-0 z-40 fixed bg-white w-full">
       <nav class="container mx-auto flex flex-wrap justify-between pt-4 pb-2 md:py-4">
         <div class="mb-4 sm:mb-0">
           <router-link to="/" @click.native="scrollToTop">

@@ -17,7 +17,7 @@ module.exports = {
           DEFAULT: {
             css: {
               a: {
-                color: theme(`colors.blue`),
+                color: theme(`colors.coolblue`),
                 textDecoration: null,
                 "&:hover": {
                   textDecoration: `underline`,
@@ -34,7 +34,7 @@ module.exports = {
       colors: {
         black: '#000',
         white: '#fff',
-        blue:  '#1c75bc',
+        myblue:  '#1c75bc',
       },
     },
     container: {
