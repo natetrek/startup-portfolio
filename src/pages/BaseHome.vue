@@ -6,8 +6,8 @@
           <div class="basis-3/4">
             <div class="text-3xl sm:text-4xl font-bold uppercase text-myblue space-y-4 pb-10">
               <p>Startup founder,</p>
-              <p>Product manager &</p>
-              <p>Developer</p>
+              <p>Developer &</p>
+              <p>Designer</p>
             </div>
             <div class="prose pb-10">
               Hi, I'm Nate. Thanks for stopping by. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -19,20 +19,22 @@
           </div>
         </div>
     </div>
-    <div class="flex flex-col basis-3/5 bg-blue-400">
-      Hello, world
+    <div class="flex flex-col basis-3/5 bg-blue-300">
+      <ImageCarousel />
     </div>
   </div>
 </template>
 
 <script>
 import SocialMediaLinks from '../components/SocialMediaLinks.vue'
+import ImageCarousel from '../components/ImageCarousel.vue'
 
 export default {
   name: "BaseHome",
 
   components: {
     SocialMediaLinks,
+    ImageCarousel,
   },
 
   data: () => ({
