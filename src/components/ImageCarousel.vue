@@ -1,13 +1,13 @@
 <template>
     <!-- Height is set so carousel container is 384px on portrait mobile screens and 288px on landscape -->
-    <div class="relative flex justify-center items-center h-screen">
+    <div id="carousel-container" class="relative flex justify-center items-center h-screen">
       <div class="absolute">
         <!-- Carousel image -->
-        <div><img id="carousel-img-id" class="shadow-xl" :src="getCarouselImgUrl(imgIndex)" alt="Automate your internal recovery process"></div>
+        <div><img id="carousel-img-id" class="shadow-xl" :width="imgWidth" :src="getImgUrl(imgIndex)" alt="Automate your internal recovery process"></div>
         <!-- Content -->
         <div id="carousel-content" class="mx-auto mt-8">
-            <div class="hero-text-sm drop-shadow-md">{{ content[contentIdx].headings[0] }}</div>
-            <div class="hero-text-sm drop-shadow-md">{{ content[contentIdx].headings[1] }}</div>
+            <div class="carousel-text">{{ content[contentIdx].headings[0] }}</div>
+            <div class="carousel-text">{{ content[contentIdx].headings[1] }}</div>
         </div>
       </div>
       <!-- Carousel image selectors-->
@@ -26,38 +26,63 @@
 </template>
 
 <script>
-import json from '../store/hero-data.json'
 
 export default {
     props: {
-        isMobile: {
-            type: Boolean,
-            required: true
-        }
+      images: {
+          type: Object,
+          required: true
+      },
+      content: {
+          type: Object,
+          required: true
+      },
     },
 
     data: function() {
-        return {
-          content: json.content,
+      return {
+          isMobile: false,
           contentIdx: 0,
           imgIndex: 1,
+          imgWidth: 300,
           carouselKey: 0,
         };
     },
 
     methods: {
         // get image URL for the carousel images
-        getCarouselImgUrl(pic) {
-          this.heroImage = this.isMobile ? 'hero-0'+pic+'-sm.jpg' : 'hero-0'+pic+'-lg.jpg'
+        getImgUrl(pic) {
+          this.heroImage = 'hero-0'+pic+'-lg.jpg'
           return new URL(`../assets/${this.heroImage}`, import.meta.url).href
         },
+
+        getImgWidth(viewWidth, viewHeight) {
+
+          console.log(viewHeight)
+          let calcWidth = 600
+          return calcWidth
+        },
+
         // update the carousel image when user clicks a carousel button
         btnUpdateCarousel(idx) {
           this.imgIndex = idx+1
           this.contentIdx = idx
+          this.refreshCarousel()
+        },
 
+        refreshCarousel() {
+
+          // set the width of the carousel image based on the screen size
+          let viewWidth = window.innerWidth;
+          let viewHeight = window.innerHeight;
+          this.imgWidth = this.getImgWidth(viewWidth, viewHeight)
+
+          console.log(this.imgWidth)
+
+          //update carousel background color
+          document.getElementById("carousel-container").style.backgroundColor = this.content[this.contentIdx].background
           //update carousel image
-          document.getElementById("carousel-img-id").src = this.getCarouselImgUrl(this.imgIndex)
+          document.getElementById("carousel-img-id").src = this.getImgUrl(this.imgIndex)
         },
 
         rotateCarousel: function () {
@@ -65,13 +90,22 @@ export default {
           setInterval(function () {
             carousel.imgIndex = (carousel.imgIndex < 4) ? carousel.imgIndex+1 : 1
             carousel.contentIdx = carousel.imgIndex - 1
-            document.getElementById("carousel-img-id").src = carousel.getCarouselImgUrl(this.imgIndex)
+            carousel.refreshCarousel
           }, 20000);
         }
     },
 
+    created() {
+      // add an event listener to the window so we can switch carousel image sizes
+      window.addEventListener('resize', this.refreshCarousel)
+    },
+
+    destroyed() {
+        window.removeEventListener('resize', this.refreshCarousel)
+    },
+
     mounted () {
-      //this.rotateCarousel()
+      this.refreshCarousel()
     }
 }
 </script>
@@ -79,58 +113,22 @@ export default {
 
 <style scoped>
 
-  .hero-text-sm {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    padding-bottom: 10px;
+  .carousel-text {
     text-transform: uppercase;
-    color: theme('colors.white');
-  }
-  .hero-text-md {
-    font-size: 16px;
     font-weight: 600;
+    letter-spacing: 0.05em;
+    padding-bottom: 8px;
     color: theme('colors.white');
-  }
-  .hero-text-lg {
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 1.2;
-    color: theme('colors.white');
-  }
-
-  .hero-btn {
-    color: theme('colors.white');
-    padding: 10px 18px 10px 18px;
-    border: 1px solid theme('colors.white');
-    border-radius: 5px;
   }
 
   @media (min-width: 1024px) {
-    .hero-text-sm {
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .carousel-text {
       color: theme('colors.white');
-    }
-    .hero-text-md {
-      font-size: 28px;
-      font-weight: 600;
-      color: theme('colors.white');
-    }
-    .hero-text-lg {
-      font-size: 56px;
-      font-weight: bold;
-      color: theme('colors.white');
-    }
-    .hero-btn {
-      color: theme('colors.white');
-      padding: 16px 32px 16px 32px;
-      border: 1px solid theme('colors.white');
-      border-radius: 5px;
     }
   }
 
   svg {
     filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.3));
   }
+
 </style>

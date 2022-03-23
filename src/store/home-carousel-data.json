@@ -1,0 +1,46 @@
+{
+    "content": [
+        {
+        "id": 1,
+        "headings": [ "Flex Research LLC",
+                      "Co-founder"],
+        "button": "Learn More",
+        "background": "#60a5fa"
+        },
+        {
+        "id": 2,
+        "headings": [ "Gold Prairie LLC",
+                      "Co-founder"],
+        "button": "Learn More",
+        "background": "#65a30d"
+        },
+        {
+        "id": 3,
+        "headings": [ "Campaign landing page",
+                       "Design & implementation"],
+        "button": "Learn More",
+        "background": "#949ef7"
+        },
+        {
+        "id": 4,
+        "headings": [ "Product highlights portal",
+                      "Design"],
+        "button": "Learn More",
+        "background": "#f9ac63"
+        }
+    ],
+    "images": [
+        { "id":  1, "index": 1, "width": 300, "name": "flexio-web-300" },
+        { "id":  2, "index": 1, "width": 400, "name": "flexio-web-400" },
+        { "id":  3, "index": 1, "width": 500, "name": "flexio-web-500" },
+        { "id":  4, "index": 1, "width": 600, "name": "flexio-web-600" },
+        { "id":  5, "index": 1, "width": 700, "name": "flexio-web-700" },
+        { "id":  6, "index": 1, "width": 800, "name": "flexio-web-800" },
+        { "id":  7, "index": 2, "width": 300, "name": "goldprairie-web-300" },
+        { "id":  8, "index": 2, "width": 400, "name": "goldprairie-web-400" },
+        { "id":  9, "index": 2, "width": 500, "name": "goldprairie-web-500" },
+        { "id": 10, "index": 2, "width": 600, "name": "goldprairie-web-600" },
+        { "id": 11, "index": 2, "width": 700, "name": "goldprairie-web-700" },
+        { "id": 12, "index": 2, "width": 800, "name": "goldprairie-web-800" }
+    ]
+}

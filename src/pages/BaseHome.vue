@@ -5,7 +5,7 @@
           <div class="basis-1/4 pb-16"><img src="../assets/nate-williams-logo.svg" alt="nate-williams-logo" width="200" /></div>
           <div class="basis-3/4">
             <div class="text-3xl sm:text-4xl font-bold uppercase text-myblue space-y-4 pb-10">
-              <p>Startup founder,</p>
+              <p>Startup founder</p>
               <p>Developer &</p>
               <p>Designer</p>
             </div>
@@ -19,8 +19,8 @@
           </div>
         </div>
     </div>
-    <div class="flex flex-col basis-3/5 bg-blue-300">
-      <ImageCarousel />
+    <div class="flex flex-col basis-3/5">
+      <ImageCarousel :images="images" :content="content" />
     </div>
   </div>
 </template>
@@ -28,6 +28,7 @@
 <script>
 import SocialMediaLinks from '../components/SocialMediaLinks.vue'
 import ImageCarousel from '../components/ImageCarousel.vue'
+import json from '../store/home-carousel-data.json'
 
 export default {
   name: "BaseHome",
@@ -37,8 +38,12 @@ export default {
     ImageCarousel,
   },
 
-  data: () => ({
-  }),
+  data: function() {
+    return {
+      content: json.content,
+      images: json.images
+    };
+  },
 
   methods : {
       btnSendEmail: function() {
