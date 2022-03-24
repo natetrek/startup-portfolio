@@ -3,7 +3,7 @@
     <div id="carousel-container" class="relative flex justify-center items-center h-screen">
       <div class="absolute">
         <!-- Carousel image -->
-        <div><img id="carousel-img-id" class="shadow-xl" :width="imgWidth" :src="getImgUrl(imgIndex)" alt="Automate your internal recovery process"></div>
+        <div><a :href="content[contentIdx].link" target="_blank"><img id="carousel-img-id" class="carousel-img shadow-xl" :width="imgWidth" :src="getImgUrl(imgIndex)" :alt="content[contentIdx].alt"></a></div>
         <!-- Content -->
         <div id="carousel-content" class="mx-auto mt-8">
             <div class="carousel-text">{{ content[contentIdx].headings[0] }}</div>
@@ -36,12 +36,11 @@ export default {
       content: {
           type: Object,
           required: true
-      },
+      }
     },
 
     data: function() {
       return {
-          isMobile: false,
           contentIdx: 0,
           imgIndex: 1,
           imgWidth: 300,
@@ -51,15 +50,23 @@ export default {
 
     methods: {
         // get image URL for the carousel images
-        getImgUrl(pic) {
-          this.heroImage = 'hero-0'+pic+'-lg.jpg'
-          return new URL(`../assets/${this.heroImage}`, import.meta.url).href
+        getImgUrl(idx) {
+
+          // Filter images by index; then find image with the current width and get its name
+          const imgIndex = this.images.filter(obj => { return (obj.index === idx); });
+          const imgName = imgIndex.find(obj => { return (obj.width === this.imgWidth); }).name;
+
+          return new URL(`../assets/${imgName}`, import.meta.url).href
         },
 
-        getImgWidth(viewWidth, viewHeight) {
-
-          console.log(viewHeight)
-          let calcWidth = 600
+        // calc the image width based on size of the carousel container; scale up as size increases
+        getImgWidth(curWidth, curHeight) {
+          let calcWidth = 300
+          if (curWidth >  600 && curHeight >  700) calcWidth = 400
+          if (curWidth >  800 && curHeight >  800) calcWidth = 500
+          if (curWidth > 1000 && curHeight >  900) calcWidth = 600
+          if (curWidth > 1200 && curHeight > 1000) calcWidth = 700
+          if (curWidth > 1400 && curHeight > 1200) calcWidth = 800
           return calcWidth
         },
 
@@ -73,16 +80,17 @@ export default {
         refreshCarousel() {
 
           // set the width of the carousel image based on the screen size
-          let viewWidth = window.innerWidth;
-          let viewHeight = window.innerHeight;
-          this.imgWidth = this.getImgWidth(viewWidth, viewHeight)
+          // carousel container is not displayed on mobile screens
+          if (!!document.getElementById("carousel-container")) {
+            let carouselWidth = document.getElementById("carousel-container").offsetWidth
+            let carouselHeight = document.getElementById("carousel-container").offsetHeight
+            this.imgWidth = this.getImgWidth(carouselWidth, carouselHeight)
 
-          console.log(this.imgWidth)
-
-          //update carousel background color
-          document.getElementById("carousel-container").style.backgroundColor = this.content[this.contentIdx].background
-          //update carousel image
-          document.getElementById("carousel-img-id").src = this.getImgUrl(this.imgIndex)
+            //update carousel background color
+            document.getElementById("carousel-container").style.backgroundColor = this.content[this.contentIdx].background
+            //update carousel image
+            document.getElementById("carousel-img-id").src = this.getImgUrl(this.imgIndex)
+          }
         },
 
         rotateCarousel: function () {
@@ -112,6 +120,11 @@ export default {
 
 
 <style scoped>
+
+  .carousel-img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
 
   .carousel-text {
     text-transform: uppercase;
