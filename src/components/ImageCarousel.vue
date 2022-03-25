@@ -1,28 +1,37 @@
 <template>
-    <!-- Height is set so carousel container is 384px on portrait mobile screens and 288px on landscape -->
-    <div id="carousel-container" class="relative flex justify-center items-center h-screen">
-      <div class="absolute">
-        <!-- Carousel image -->
-        <div><a :href="content[contentIdx].link" target="_blank"><img id="carousel-img-id" class="carousel-img shadow-xl" :width="imgWidth" :src="getImgUrl(imgIndex)" :alt="content[contentIdx].alt"></a></div>
-        <!-- Content -->
-        <div id="carousel-content" class="mx-auto mt-8">
-            <div class="carousel-text">{{ content[contentIdx].headings[0] }}</div>
-            <div class="carousel-text">{{ content[contentIdx].headings[1] }}</div>
-        </div>
-      </div>
-      <!-- Carousel image selectors-->
-      <div id="carousel-selectors" class="absolute flex bottom-0 left-1/2 transform -translate-x-1/2 mb-6">
-        <div v-for="(item,idx) in new Array(4)" :key="idx">
-          <button v-if="this.imgIndex==(idx+1)" @click="btnUpdateCarousel(idx)" v-bind:value="contentIdx" class="px-1.5">
-            <svg xmlns="http://www.w3.org/2000/svg" height="14px" width="14px" viewBox="0 0 24 24" class="fill-white"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg>
-          </button>
-          <button v-else @click="btnUpdateCarousel(idx)" v-bind:value="contentIdx" class="px-1.5">
-            <svg xmlns="http://www.w3.org/2000/svg" height="14px" width="14px" viewBox="0 0 24 24" class="fill-slate-300"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg>
-          </button>
-        </div>
+  <!-- Non-mobile display -->
+  <div v-if="!isMobile" id="carousel-container" class="relative flex justify-center items-center h-screen">
+    <div class="absolute">
+      <!-- Carousel image -->
+      <div><a :href="content[contentIdx].link" target="_blank"><img id="carousel-img-id" class="carousel-img shadow-xl" :width="imgWidth" :src="getImgUrl(imgIndex)" :alt="content[contentIdx].alt"></a></div>
+      <!-- Content -->
+      <div id="carousel-content" class="mx-auto mt-8">
+          <div class="carousel-text">{{ content[contentIdx].headings[0] }}</div>
+          <div class="carousel-text">{{ content[contentIdx].headings[1] }}</div>
       </div>
     </div>
-
+    <!-- Carousel image selectors-->
+    <div id="carousel-selectors" class="absolute flex bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+      <div v-for="(item,idx) in new Array(4)" :key="idx">
+        <button v-if="this.imgIndex==(idx+1)" @click="btnUpdateCarousel(idx)" v-bind:value="contentIdx" class="px-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" height="14px" width="14px" viewBox="0 0 24 24" class="fill-white"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg>
+        </button>
+        <button v-else @click="btnUpdateCarousel(idx)" v-bind:value="contentIdx" class="px-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" height="14px" width="14px" viewBox="0 0 24 24" class="fill-slate-300"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile display -->
+  <div v-else class="flex justify-center items-center h-550" v-for="item in content" :key="item.id" :style="{'background-color': item.background}">
+      <div class="flex flex-col">
+        <div><a :href="item.link" target="_blank"><img class="pt-6 shadow-xl" :width="imgWidth" :src="getImgUrl(item.id)" :alt="item.alt"></a></div>
+        <div class="justify-left mt-6">
+            <div class="carousel-text">{{ item.headings[0] }}</div>
+            <div class="carousel-text">{{ item.headings[1] }}</div>
+        </div>
+      </div>
+  </div>
 </template>
 
 <script>
@@ -35,6 +44,10 @@ export default {
       },
       content: {
           type: Object,
+          required: true
+      },
+      isMobile: {
+          type: Boolean,
           required: true
       }
     },
@@ -77,11 +90,10 @@ export default {
           this.refreshCarousel()
         },
 
+        // update the source & width of the carousel image based on image selected & screen size
+        // carousel container is not displayed on mobile screens
         refreshCarousel() {
-
-          // set the width of the carousel image based on the screen size
-          // carousel container is not displayed on mobile screens
-          if (!!document.getElementById("carousel-container")) {
+          if (document.getElementById("carousel-container")) {
             let carouselWidth = document.getElementById("carousel-container").offsetWidth
             let carouselHeight = document.getElementById("carousel-container").offsetHeight
             this.imgWidth = this.getImgWidth(carouselWidth, carouselHeight)
@@ -96,9 +108,11 @@ export default {
         rotateCarousel: function () {
           var carousel = this;
           setInterval(function () {
-            carousel.imgIndex = (carousel.imgIndex < 4) ? carousel.imgIndex+1 : 1
-            carousel.contentIdx = carousel.imgIndex - 1
-            carousel.refreshCarousel
+            if (!this.isMobile) {
+              carousel.imgIndex = (carousel.imgIndex < 4) ? carousel.imgIndex+1 : 1
+              carousel.contentIdx = carousel.imgIndex - 1
+              carousel.refreshCarousel()
+            }
           }, 20000);
         }
     },
@@ -114,6 +128,7 @@ export default {
 
     mounted () {
       this.refreshCarousel()
+//      this.rotateCarousel()
     }
 }
 </script>

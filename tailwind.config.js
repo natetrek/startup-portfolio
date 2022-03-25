@@ -9,7 +9,7 @@ module.exports = {
         '7': '7px',
       },
       height: {
-        '400': '400px',
+        '550': '550px',
       },
 
       typography: (theme) => {
