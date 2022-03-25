@@ -12,7 +12,7 @@
             </div>
             <div class="prose pb-10">
                 Web software entrepreneur and data geek who loves large-scale art projects, good design, and trekking in the backcountry.
-                Formerly CEO and Co-founder at <a href="https://flexio.natewilliams.tech" target="_blank">@Flex.io</a> and <a href="https://goldprairie.natewilliams.tech" target="_blank">@Gold Prairie</a>.
+                Formerly CEO and Co-founder at <a href="https://flexio.natewilliams.dev" target="_blank">@Flex.io</a> and <a href="https://goldprairie.natewilliams.dev" target="_blank">@Gold Prairie</a>.
                 Follow my work and endeavors below.
             </div>
             <SocialMediaLinks class="pb-12" />
@@ -39,7 +39,7 @@
         </div>
         <div class="prose pb-8">
             Web software entrepreneur and data geek who loves large-scale art projects, good design, and trekking in the backcountry.
-            Formerly CEO and Co-founder at <a href="https://flexio.natewilliams.tech" target="_blank">@Flex.io</a> and <a href="https://goldprairie.natewilliams.tech" target="_blank">@Gold Prairie</a>.
+            Formerly CEO and Co-founder at <a href="https://flexio.natewilliams.dev" target="_blank">@Flex.io</a> and <a href="https://goldprairie.natewilliams.dev" target="_blank">@Gold Prairie</a>.
             Follow my work and endeavors below.        </div>
         <div class="flex justify-center"><SocialMediaLinks class="pb-10" /></div>
         <div class="flex justify-center"><button class="section-btn-sm hover:bg-blue-400 hover:bg-opacity-20 pb-8" @click="btnSendEmail">Get in touch</button></div>
@@ -81,7 +81,7 @@ export default {
   methods : {
       // open a mail client to handle sending an email
       btnSendEmail: function() {
-          window.open("mailto:nate@natewilliams.tech");
+          window.open("mailto:nate@natewilliams.dev");
       },
       // update variable used to select mobile display elements
       handleResize() {
