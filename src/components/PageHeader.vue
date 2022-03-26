@@ -1,0 +1,80 @@
+<template>
+  <div class="top-0 left-0 z-40 fixed w-full" :class="isMobile ? 'bg-white': 'bg-transparent'">
+    <div class="container-inner flex flex-wrap justify-between items-center mx-auto py-8">
+      <div v-if="isMobile"><!-- include logo on top nav for all mobile screen pages -->
+        <router-link to="/" @click.native="scrollToTop">
+          <img src="../assets/nate-williams-logo-180.svg" alt="nate-williams-logo" width="180" />
+        </router-link>
+      </div>
+    </div>
+    <div class="absolute right-0 top-0 p-8">
+      <button @click="toggleBurger" class="flex items-center">
+        <svg class="h-6 w-6" :class="isWhite ? 'fill-white': 'fill-myblue'" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+      </button>
+    </div>
+    <div class="nav-btn-container w-full bg-white py-8"
+        :class="isOpen ? 'absolute right-0 top-0 h-screen w-48 lg:w-60  border-l border-gray-200': 'hidden'"
+    >
+      <div class="flex justify-end pb-2 pr-7">
+        <button @click="toggleBurger">
+          <svg class="h-7 w-7 fill-myblue" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+      <ul>
+        <li><router-link to="/" @click="scrollToTop"><div class="nav-btn pl-6 py-3 lg:py-4">Home</div></router-link></li>
+        <li><router-link to="/work" @click="scrollToTop"><div class="nav-btn pl-6 py-3 lg:py-4">Work</div></router-link></li>
+        <li><router-link to="/about" @click="scrollToTop"><div class="nav-btn pl-6 py-3 lg:py-4">About</div></router-link></li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'PageHeader',
+
+    props: {
+      isMobile: {
+          type: Boolean,
+          required: true
+      },
+      isWhite: {
+          type: Boolean,
+          required: true
+      }
+    },
+
+    data() {
+      return {
+        isOpen: false,
+      }
+    },
+
+    methods: {
+      scrollToTop() {
+        this.isOpen = false
+        window.scrollTo(0,0);
+      },
+      closeBurger() {
+        this.isOpen = false
+        window.scrollTo(0,0);
+      },
+      toggleBurger() {
+        this.isOpen = !this.isOpen
+      }
+    }
+  }
+</script>
+
+<style scoped>
+.nav-btn{
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: theme('colors.myblue');
+}
+.nav-btn:hover{
+  background-color: theme('colors.gray.100');
+}
+
+</style>

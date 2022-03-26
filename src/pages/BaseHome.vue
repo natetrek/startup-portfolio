@@ -1,9 +1,12 @@
 <template>
   <!-- Non-mobile display -->
   <div v-if="!isMobile" class="flex">
+    <PageHeader :isMobile="isMobile" :isWhite=true />
     <div class="flex flex-col basis-2/5 h-screen px-4 pt-12 pb-20">
         <div class="container-inner flex flex-col grow mx-auto">
-          <div class="basis-1/5 pb-8 lg:pb-12"><img src="../assets/nate-williams-logo-200.svg" alt="nate-williams-logo" width="200" /></div>
+          <div class="basis-1/5 pb-8 lg:pb-12">
+            <img src="../assets/nate-williams-logo-200.svg" alt="nate-williams-logo" width="200" />
+          </div>
           <div class="basis-4/5">
             <div class="text-3xl xl:text-4xl font-bold uppercase text-myblue space-y-4 pb-10">
               <p>Startup founder</p>
@@ -18,7 +21,7 @@
             <SocialMediaLinks class="pb-12" />
             <button class="section-btn-lg hover:bg-blue-400 hover:bg-opacity-20 pb-10" @click="btnSendEmail">Get in touch</button>
             <div class="footer-container">
-              <AppFooter class="absolute flex bottom-0 mb-4" />
+              <PageFooter class="absolute flex bottom-0 mb-4" />
             </div>
           </div>
         </div>
@@ -29,7 +32,8 @@
   </div>
   <!-- Mobile display -->
   <div v-else>
-    <div class="container-inner mx-auto py-12">
+    <PageHeader :isMobile="isMobile" :isWhite=false />
+    <div class="container-inner mx-auto py-8">
       <div class="pb-12"><img src="../assets/nate-williams-logo-180.svg" alt="nate-williams-logo" width="180" /></div>
       <div>
         <div class="text-3xl sm:text-4xl font-bold uppercase text-myblue space-y-4 pb-10">
@@ -49,7 +53,7 @@
       <ImageCarousel :images="images" :content="content" :isMobile="isMobile" />
     </div>
     <div class="h-16">
-      <AppFooter class="flex justify-center items-center h-full mx-auto" />
+      <PageFooter class="flex justify-center items-center h-full mx-auto" />
     </div>
   </div>
 
@@ -58,7 +62,8 @@
 <script>
 import SocialMediaLinks from '../components/SocialMediaLinks.vue'
 import ImageCarousel from '../components/ImageCarousel.vue'
-import AppFooter from '../components/AppFooter.vue'
+import PageHeader from '../components/PageHeader.vue'
+import PageFooter from '../components/PageFooter.vue'
 import json from '../store/home-carousel-data.json'
 
 export default {
@@ -67,7 +72,8 @@ export default {
   components: {
     SocialMediaLinks,
     ImageCarousel,
-    AppFooter,
+    PageHeader,
+    PageFooter,
   },
 
   data: function() {

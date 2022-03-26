@@ -81,7 +81,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
   button {
     margin: 0px 0px 0px 0px;
     background: transparent;

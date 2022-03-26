@@ -3,7 +3,7 @@ import { createWebHistory, createRouter } from 'vue-router';
 
 import App from './App.vue';
 import BaseHome from './pages/BaseHome.vue';
-//import BaseWork from './pages/BaseWork.vue';
+import BaseWork from './pages/BaseWork.vue';
 import BaseAbout from './pages/BaseAbout.vue';
 import NotFound from './pages/NotFound.vue';
 
@@ -11,7 +11,7 @@ import './css/main.css'
 
 const routes = [
   { path: '/', component: BaseHome },
-//  { path: '/work', component: BaseWork },
+  { path: '/work', component: BaseWork },
   { path: '/about', component: BaseAbout },
   { path: "/:catchAll(.*)", component: NotFound },
 ];
