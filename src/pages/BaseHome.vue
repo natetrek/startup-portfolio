@@ -1,7 +1,7 @@
 <template>
   <!-- Non-mobile display -->
   <div v-if="!isMobile" class="flex">
-    <PageHeader :isMobile="isMobile" :isWhite=true />
+    <PageHeader :isMobile="isMobile" />
     <div class="flex flex-col basis-2/5 h-screen px-4 pt-12 pb-20">
         <div class="container-inner flex flex-col grow mx-auto">
           <div class="basis-1/5 pb-8 lg:pb-12">
@@ -14,9 +14,10 @@
               <p>Designer</p>
             </div>
             <div class="prose pb-10">
-                Web software entrepreneur and data geek who loves large-scale art projects, good design, and trekking in the backcountry.
-                Formerly CEO and Co-founder at <a href="https://flexio.natewilliams.dev" target="_blank">@Flex.io</a> and <a href="https://goldprairie.natewilliams.dev" target="_blank">@Gold Prairie</a>.
-                Follow my work and endeavors below.
+                Web software entrepreneur who loves <a href="https://vitejs.dev/" target="_blank">amazing tech</a>,
+                <a href="https://davidwallacehaskins.com/" target="_blank">large-scale art</a>
+                and backcountry treks. Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
+                and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation and code.
             </div>
             <SocialMediaLinks class="pb-12" />
             <button class="section-btn-lg hover:bg-blue-400 hover:bg-opacity-20 pb-10" @click="btnSendEmail">Get in touch</button>
@@ -32,7 +33,7 @@
   </div>
   <!-- Mobile display -->
   <div v-else>
-    <PageHeader :isMobile="isMobile" :isWhite=false />
+    <PageHeader :isMobile="isMobile" />
     <div class="container-inner mx-auto py-8">
       <div class="pb-12"><img src="../assets/nate-williams-logo-180.svg" alt="nate-williams-logo" width="180" /></div>
       <div>
@@ -42,9 +43,11 @@
           <p>Designer</p>
         </div>
         <div class="prose pb-8">
-            Web software entrepreneur and data geek who loves large-scale art projects, good design, and trekking in the backcountry.
-            Formerly CEO and Co-founder at <a href="https://flexio.natewilliams.dev" target="_blank">@Flex.io</a> and <a href="https://goldprairie.natewilliams.dev" target="_blank">@Gold Prairie</a>.
-            Follow my work and endeavors below.        </div>
+            Web software entrepreneur who loves <a href="https://vitejs.dev/" target="_blank">amazing tech</a>,
+            <a href="https://davidwallacehaskins.com/" target="_blank">large-scale art</a>
+            and backcountry treks. Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
+            and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation and code.
+        </div>
         <div class="flex justify-center"><SocialMediaLinks class="pb-10" /></div>
         <div class="flex justify-center"><button class="section-btn-sm hover:bg-blue-400 hover:bg-opacity-20 pb-8" @click="btnSendEmail">Get in touch</button></div>
       </div>

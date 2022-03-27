@@ -9,7 +9,7 @@
     </div>
     <div :class="!isOpen ? 'absolute right-0 top-0 p-8': 'hidden'">
       <button @click="toggleBurger" class="flex items-center">
-        <svg class="h-6 w-6" :class="isWhite ? 'fill-white': 'fill-myblue'" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+        <svg class="h-6 w-6" :class="isMobile ? 'fill-myblue': 'fill-white'" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
       </button>
     </div>
     <div class="nav-btn-container w-full bg-gray-800/70 lg:bg-gray-800/60 h-screen w-52 lg:w-60 py-8"
@@ -35,10 +35,6 @@
 
     props: {
       isMobile: {
-          type: Boolean,
-          required: true
-      },
-      isWhite: {
           type: Boolean,
           required: true
       }
@@ -75,8 +71,6 @@
   color: theme('colors.white');
 }
 .nav-btn:hover{
-  background-color: theme('colors.gray.500');
-
+   background-color:rgb(0,0,0,0.3);
 }
-
 </style>
