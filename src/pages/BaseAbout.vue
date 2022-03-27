@@ -11,7 +11,7 @@
           <div class="text-2xl leading-10">Highlights from the enterprise software startups I helped build</div>
         </div>
         <div class="mt-8 sm:mt-0">
-          <img src="../assets/trekking-in-mountains.svg" width="275" alt="trekking in the mountains" class="mx-auto sm:mx-0">
+          <img src="../assets/trekking-in-mountains.svg" width="275" alt="trekking in the mountains" class="mx-auto sm:mx-0 drop-shadow-xl">
         </div>
       </div>
     </div>
