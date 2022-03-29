@@ -16,44 +16,39 @@
       </div>
     </div>
 
-    <!-- Solution highlights -->
-    <div class="home-content-section container-inner mx-2 md:mx-auto py-8 md:py-16">
-      <div class="space-y-8 pb-12">
-        <div class="heading text-3xl md:text-4xl text-center">Address the Source of Payment Errors</div>
-        <div class="content">Gold Prairie tracks the reasons why payment errors occur, helping you identify and understand their root causes. Beyond just catching errors, you can strengthen your internal controls and address problems at the source.</div>
-      </div>
-      <div v-if="isMobile" class="border-t-2 border-gray-100 pb-2"></div>
-      <div class="flex flex-col md:flex-row basis-1/3 mx-2 md:mx-auto gap-8 md:gap-12 my-4">
-        <div class="flex-col space-y-4">
-          <div class="subheading">Retail & Grocery Payment Monitoring</div>
-          <div class="content">Gold Prairie pinpoints and prevents a wide range of payment errors common in the retail industry, including duplicate payments, pricing errors, missed promotional allowances and missed rebates. With Gold Prairie, you can identify overpayments in real-time at a fraction of your current cost.</div>
-          <button class="font-bold text-blue-500">Learn More</button>
-        </div>
-        <div v-if="isMobile" class="border-t-2 border-gray-100"></div>
-        <div class="flex-col space-y-4">
-          <div class="subheading">Duplicate Payment Prevention</div>
-          <div class="content">Why wait for a recovery audit to catch duplicate payments? With Gold Prairie, you can eliminate duplicate payments from your organization. Gold Prairie continuously monitors your payment systems and automatically detects potential duplicate payments before they go out the door.</div>
-          <button class="font-bold text-blue-500">Learn More</button>
-        </div>
-        <div v-if="isMobile" class="border-t-2 border-gray-100"></div>
-        <div class="flex-col space-y-4">
-          <div class="subheading">Vendor File Analysis and Monitoring</div>
-          <div class="content">Get your vendor file under control and keep it clean for the long-haul. Gold Prairie enables you to quickly identify duplicated and erroneous vendor entries. And, once it’s clean, Gold Prairie’s automated vendor monitoring system will help you keep it that way.</div>
-          <button class="font-bold text-blue-500">Learn More</button>
-        </div>
-      </div>
-    </div>
-
     <!-- Why wait for results? -->
-    <div class="bg-stone-200">
-      <div class="home-content-section container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-16">
+    <div class="bg-white">
+      <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-16">
           <div class="space-y-8 md:space-y-12 pt-4 md:pt-8">
-            <div class="heading text-3xl md:text-4xl text-center md:text-left">Why Wait For Results?</div>
+            <div class="heading text-2xl md:text-3xl text-center md:text-left">Why Wait For Results?</div>
             <div class="content">Gold Prairie pinpoints payment errors automatically and delivers them directly to your internal staff—day and night, rain or shine. Rather than waiting for an outside audit to uncover these errors, you can identify and address them immediately, before they become a drain on your profits.</div>
             <div class="text-center md:text-left"><button class="section-btn hover:bg-blue-400 hover:bg-opacity-20">Learn More</button></div>
           </div>
       </div>
     </div>
+
+    <!-- Why wait for results? -->
+    <div class="bg-white">
+      <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-16 border-t border-gray-300">
+          <div class="space-y-8 md:space-y-12 pt-4 md:pt-8">
+            <div class="heading text-2xl md:text-3xl text-center">Why Wait For Results?</div>
+            <div class="content">Gold Prairie pinpoints payment errors automatically and delivers them directly to your internal staff—day and night, rain or shine. Rather than waiting for an outside audit to uncover these errors, you can identify and address them immediately, before they become a drain on your profits.</div>
+            <div class="text-center md:text-left"><button class="section-btn hover:bg-blue-400 hover:bg-opacity-20">Learn More</button></div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Technologies, frameworks & tools -->
+    <div class="container-inner mx-2 sm:mx-auto py-8 md:py-16 border-t border-gray-300">
+      <div class="heading text-2xl md:text-3xl text-center pb-12">Technologies, Frameworks & Tools</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-auto gap-8">
+          <div class="flex flex-col items-center" v-for="item in technologies" :key="item.id">
+              <img class="w-48 h-48" :src="getImgUrl(item.img)" :alt="item.name">
+              <div class="prose prose-sm flex justify-center pt-4">{{ item.name }} </div>
+          </div>
+      </div>
+    </div>
+
 
     <!-- Page footer centered -->
     <div class="h-16">
@@ -65,6 +60,7 @@
 <script>
 import PageHeader from '../components/PageHeader.vue'
 import PageFooter from '../components/PageFooter.vue'
+import json from '../store/about-technologies-data.json'
 
 export default {
   name: "BaseAbout",
@@ -76,11 +72,15 @@ export default {
 
   data: function() {
     return {
+      technologies: json.technologies,
       isMobile: false
     };
   },
 
   methods : {
+      getImgUrl(imgName) {
+        return new URL(`../assets/logos/${imgName}`, import.meta.url).href
+      },
       // update variable used to select mobile display elements
       handleResize() {
         this.isMobile = (window.innerWidth < 725 || window.innerHeight < 650 || (window.innerWidth < 920 && window.innerHeight < 720) );
@@ -148,4 +148,3 @@ export default {
   }
 
 </style>
-
