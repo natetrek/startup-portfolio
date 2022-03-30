@@ -14,6 +14,7 @@
         <ul class="uppercase tracking-wide font-bold w-full block flex-grow space-y-6 md:space-y-0 md:flex md:flex-initial md:w-auto items-center mt-4 mb-2 md:my-0"
             :class="isOpen ? 'block': 'hidden'"
         >
+          <li class="mr-8"><router-link to="/" @click="closeBurger"><div class="text-gray-600 hover:text-gray-400">Home</div></router-link></li>
           <li class="mr-8"><router-link to="/startups" @click="closeBurger"><div class="text-gray-600 hover:text-gray-400">Startups</div></router-link></li>
           <li><router-link to="/about" @click="closeBurger"><div class="text-gray-600 hover:text-gray-400">About</div></router-link></li>
         </ul>
