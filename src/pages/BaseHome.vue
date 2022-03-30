@@ -1,144 +1,57 @@
 <template>
-  <!-- Non-mobile display -->
-  <div v-if="!isMobile" class="flex">
-    <!-- PageHeader :isMobile="isMobile" / -->
-    <div class="flex flex-col basis-2/5 h-screen px-4 pt-12 pb-20">
-        <div class="container-inner flex flex-col grow mx-auto">
-          <div class="basis-1/5 pb-8 lg:pb-12">
-            <img src="../assets/nate-williams-logo-200.svg" alt="nate-williams-logo" width="200" />
-          </div>
-          <div class="basis-4/5">
-            <div class="text-3xl xl:text-4xl font-bold uppercase text-myblue space-y-4 pb-10">
-              <p>Startup founder</p>
-              <p>Developer &</p>
-              <p>Designer</p>
-            </div>
-            <div class="prose pb-10">
-                Web software entrepreneur who loves <a href="https://vitejs.dev/" target="_blank">amazing tech</a>,
-                <a href="https://davidwallacehaskins.com/" target="_blank">large-scale art</a>
-                and backcountry treks. Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
-                and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation and code.
-            </div>
-            <SocialMediaLinks class="pb-12" />
-            <button class="section-btn-lg hover:bg-blue-400 hover:bg-opacity-20 pb-10" @click="btnSendEmail">Get in touch</button>
-            <div class="footer-container">
-              <PageFooter class="absolute flex bottom-0 mb-4" />
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="flex flex-col basis-3/5">
-      <ImageCarousel :images="images" :content="content" :isMobile="isMobile" />
-    </div>
-  </div>
-  <!-- Mobile display -->
-  <div v-else>
-    <!-- PageHeader :isMobile="isMobile" / -->
-    <div class="container-inner mx-auto py-8">
-      <div class="pb-12"><img src="../assets/nate-williams-logo-180.svg" alt="nate-williams-logo" width="180" /></div>
-      <div>
-        <div class="text-3xl sm:text-4xl font-bold uppercase text-myblue space-y-4 pb-10">
-          <p>Startup founder</p>
-          <p>Developer &</p>
-          <p>Designer</p>
-        </div>
-        <div class="prose pb-8">
-            Web software entrepreneur who loves <a href="https://vitejs.dev/" target="_blank">amazing tech</a>,
-            <a href="https://davidwallacehaskins.com/" target="_blank">large-scale art</a>
-            and backcountry treks. Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
-            and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation and code.
-        </div>
-        <div class="flex justify-center"><SocialMediaLinks class="pb-10" /></div>
-        <div class="flex justify-center"><button class="section-btn-sm hover:bg-blue-400 hover:bg-opacity-20 pb-8" @click="btnSendEmail">Get in touch</button></div>
+  <div class="sm:mx-auto">
+
+    <div class="container-inner flex flex-col sm:flex-row justify-left py-8">
+      <div class="text-3xl sm:text-4xl font-bold w-full sm:w-3/5 text-center sm:text-left self-center space-y-6">
+        <div>Hello, I'm Nate</div>
+        <div class="text-blue leading-snug">Startup founder & backcountry explorer</div>
+      </div>
+      <div class="mt-8 sm:mt-0">
+        <img src="../assets/trekking-in-mountains.svg" width="275" style="box-shadow:5px 5px 5px #999; border-radius:50%;" alt="trekking in the mountains" class="mx-auto sm:mx-0">
+      </div>
+    </div> <!-- end hero -->
+
+    <div class="container-inner">
+      <p class="prose prose-lg sm:prose-xl  max-w-none">Thanks for stopping by. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Ipsum dolores officia praesentium quasi eius? Provident quam tenetur alias aperiam unde labore, dolore placeat
+        laudantium fugit adipisci mollitia nam illum ab dolorum quos, delectus nobis ex? And checkout my last startup, <a href="/treks/how-to-get-better-at-coding/">Flex.io</a>
+      </p>
+      <div class="flex justify-center py-16">
+        <img src="../assets/at-my-desk.svg" width="250" alt="at my desk">
       </div>
     </div>
-    <div>
-      <ImageCarousel :images="images" :content="content" :isMobile="isMobile" />
-    </div>
-    <div class="h-16">
-      <PageFooter class="flex justify-center items-center h-full mx-auto" />
-    </div>
+
+    <div class="container-inner text-xl border-t border-gray-500 border-b py-16 mb-16">
+      <h2 class="font-bold mb-6">Highlights</h2>
+
+      <ul class="text-lg sm:text-xl space-y-6">
+        <li class="checkmark">
+          <div>Highlight One</div>
+          <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+        </li>
+        <li class="checkmark">
+          <div>Highlight Two</div>
+          <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+        </li>
+        <li class="checkmark">
+          <div>Highlight Three</div>
+          <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+        </li>
+        <li class="checkmark">
+          <div>Highlight Four</div>
+          <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+        </li>
+      </ul>
+    </div> <!-- end projects -->
   </div>
 
 </template>
 
 <script>
-import SocialMediaLinks from '../components/SocialMediaLinks.vue'
-import ImageCarousel from '../components/ImageCarousel.vue'
-import PageHeader from '../components/PageHeader.vue'
-import PageFooter from '../components/PageFooter.vue'
-import json from '../store/home-carousel-data.json'
+  export default {
+    name: "BaseHome",
 
-export default {
-  name: "BaseHome",
-
-  components: {
-    SocialMediaLinks,
-    ImageCarousel,
-    PageHeader,
-    PageFooter,
-  },
-
-  data: function() {
-    return {
-      content: json.content,
-      images: json.images,
-      isMobile: false
-    };
-  },
-
-  methods : {
-      // open a mail client to handle sending an email
-      btnSendEmail: function() {
-          window.open("mailto:nate@natewilliams.dev");
-      },
-      // update variable used to select mobile display elements
-      handleResize() {
-        this.isMobile = (window.innerWidth < 725 || window.innerHeight < 650 || (window.innerWidth < 920 && window.innerHeight < 720) );
-      },
-  },
-
-  created() {
-    // add an event listener to the window so we can switch image sizes
-    window.addEventListener('resize', this.handleResize)
-    this.handleResize()
-  },
-
-  destroyed() {
-      window.removeEventListener('resize', this.handleResize)
-  }
-
-};
+    data: () => ({
+    }),
+  };
 </script>
-
-
-<style scoped>
-  .section-btn-lg {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: theme('colors.myblue');
-    padding: 10px 28px 10px 28px;
-    border: 1px solid theme('colors.myblue');
-    border-radius: 25px;
-  }
-  .section-btn-sm {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    color: theme('colors.myblue');
-    padding: 10px 28px 10px 28px;
-    border: 1px solid theme('colors.myblue');
-    border-radius: 25px;
-  }
-
-  .footer-container {
-    display: none;
-  }
-
-  @media (min-height: 720px) {
-    .footer-container {
-      display: flex;
-    }
-  }
-
-</style>
