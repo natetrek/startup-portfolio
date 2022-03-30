@@ -57,7 +57,7 @@
 
 <script>
 // Using vite-plugin-md plugin to import Markdown files as Vue components
-import TestPost from '../startups/placeholder-short.md'
+import TestPost from '../store/placeholder-short.md'
 
 export default {
   name: "BaseStartups",

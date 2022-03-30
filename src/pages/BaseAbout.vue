@@ -11,85 +11,60 @@
       </div>
     </div>
 
-    <!-- Flex.io highlights -->
-    <div class="flexio container-inner flex flex-col sm:flex-row sm:mx-auto border-t border-gray-500 py-16">
-      <div class="flex-auto sm:w-1/3 mx-auto mb-12 sm:mb-0">
-        <button @click="btnOpenFlexio" class="items-center px-8 py-12 sm:py-24">
-            <img src="../assets/flexio-logo.png" width="200" alt="trekking in the mountains" class="mx-auto sm:mx-0">
-        </button>
-      </div>
-      <div class="prose max-w-none flex-auto sm:w-2/3 sm:pl-8">
-        <h2>Flex.io</h2>
-        <TestPost />
+    <!-- Technologies, frameworks & tools -->
+    <div class="container-inner mx-2 sm:mx-auto py-8 md:py-16 border-t border-gray-300">
+      <div class="heading text-2xl md:text-3xl text-center pb-12">Technologies, Frameworks & Tools</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-auto gap-8">
+          <div class="flex flex-col items-center" v-for="item in technologies" :key="item.id">
+              <img class="w-48 h-48" :src="getImgUrl(item.img)" :alt="item.name">
+              <div class="prose prose-sm flex justify-center pt-4">{{ item.name }} </div>
+          </div>
       </div>
     </div>
-
-    <!-- Gold Prairie highlights -->
-    <div class="goldprairie container-inner flex flex-col sm:flex-row sm:mx-auto pb-16">
-      <div class="flex-auto sm:w-1/3 mx-auto mb-12 sm:mb-0">
-        <button @click="btnOpenKirix" class="items-center sm:mx-0 px-8 py-12 sm:py-24">
-            <img src="../assets/gp-logo.png" width="200" alt="trekking in the mountains" class="mx-auto sm:mx-0">
-        </button>
-      </div>
-      <div class="prose max-w-none flex-auto sm:w-2/3 sm:pl-8">
-        <h2>Gold Prairie</h2>
-        <TestPost />
-      </div>
-    </div>
-
-    <!-- Kirix highlights -->
-    <div class="kirix container-inner flex flex-col sm:flex-row sm:mx-auto pb-16">
-      <div class="flex-auto sm:w-1/3 mx-auto mb-12 sm:mb-0">
-        <button @click="btnOpenKirix" class="items-center sm:mx-0 px-8 py-12 sm:py-24">
-            <img src="../assets/kirix-logo.png" width="200" alt="trekking in the mountains" class="mx-auto sm:mx-0">
-        </button>
-      </div>
-      <div class="prose max-w-none flex-auto sm:w-2/3 sm:pl-8">
-        <h2>Kirix Resarch</h2>
-        <TestPost />
-      </div>
-    </div>
-
   </div>
 
 </template>
 
-
 <script>
-// Using vite-plugin-md plugin to import Markdown files as Vue components
-import TestPost from '../startups/placeholder-short.md'
+import json from '../store/about-technologies-data.json'
 
 export default {
-  name: "BaseStartups",
+  name: "BaseAbout",
 
-  components: {
-    TestPost,
+  data: function() {
+    return {
+      technologies: json.technologies,
+      isMobile: false
+    };
   },
-
-  data: () => ({
-  }),
 
   methods : {
-      btnOpenFlexio: function() {
-          window.open("https://flexio.natetrek.com");
+      getImgUrl(imgName) {
+        return new URL(`../assets/logos/${imgName}`, import.meta.url).href
       },
-      btnOpenKirix: function() {
-          window.open("https://www.kirix.com");
-      }
+      // update variable used to select mobile display elements
+      handleResize() {
+        this.isMobile = (window.innerWidth < 725 || window.innerHeight < 650 || (window.innerWidth < 920 && window.innerHeight < 720) );
+      },
   },
+
+  created() {
+    // add an event listener to the window so we can switch image sizes
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+
+  destroyed() {
+      window.removeEventListener('resize', this.handleResize)
+  }
+
 };
 </script>
 
-
-<style>
-  button {
-    margin: 0px 0px 0px 0px;
-    background: transparent;
-    border: 1px solid theme('colors.gray.400');
+<style scoped>
+  .heading {
+    font-weight: 400;
+    color: #222;
   }
 
-  button:hover {
-    border: 1px solid theme('colors.gray.700');
-  }
 </style>
-
