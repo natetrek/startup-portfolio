@@ -11,8 +11,8 @@ import './css/main.css'
 
 const routes = [
   { path: '/', component: BaseHome },
-  { path: '/work', component: BaseWork },
-  { path: '/about', component: BaseAbout },
+//  { path: '/work', component: BaseWork },
+//  { path: '/about', component: BaseAbout },
   { path: "/:catchAll(.*)", component: NotFound },
 ];
 
