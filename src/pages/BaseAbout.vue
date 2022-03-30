@@ -1,18 +1,18 @@
 <template>
   <div class="sm:mx-auto">
 
-    <div class="container-inner flex flex-col sm:flex-row justify-left py-8">
+    <div class="container-inner flex flex-col sm:flex-row justify-left py-10">
       <div class="w-full sm:w-3/5 text-center sm:text-left self-center space-y-8 sm:pr-8">
         <div class="text-3xl sm:text-4xl font-bold">About Me</div>
         <div class="text-2xl font-bold text-blue leading-10">Highlights from the enterprise software startups I helped build</div>
       </div>
       <div class="mt-8 sm:mt-0">
-        <img src="../assets/trekking-in-mountains.svg" width="275" style="box-shadow:5px 5px 5px #999; border-radius:50%;" alt="trekking in the mountains" class="mx-auto sm:mx-0">
+        <img src="../assets/coder-at-desk.svg" width="275" alt="trekking in the mountains" class="mx-auto sm:mx-0">
       </div>
     </div>
 
     <!-- Technologies, frameworks & tools -->
-    <div class="container-inner mx-2 sm:mx-auto py-8 md:py-16 border-t border-gray-300">
+    <div class="container-inner mx-2 sm:mx-auto py-8 md:py-16">
       <div class="heading text-2xl md:text-3xl text-center pb-12">Technologies, Frameworks & Tools</div>
       <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-auto gap-8">
           <div class="flex flex-col items-center" v-for="item in technologies" :key="item.id">

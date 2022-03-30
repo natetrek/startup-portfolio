@@ -1,7 +1,7 @@
 <template>
   <div class="sm:mx-auto">
 
-    <div class="container-inner flex flex-col sm:flex-row justify-left py-8">
+    <div class="container-inner flex flex-col sm:flex-row justify-left py-10">
       <div class="text-3xl sm:text-4xl font-bold w-full sm:w-3/5 text-center sm:text-left self-center space-y-6">
         <div>Hello, I'm Nate</div>
         <div class="text-blue leading-snug">Startup founder & backcountry explorer</div>
@@ -12,17 +12,14 @@
     </div> <!-- end hero -->
 
     <div class="container-inner">
-      <p class="prose prose-lg sm:prose-xl  max-w-none">Thanks for stopping by. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Ipsum dolores officia praesentium quasi eius? Provident quam tenetur alias aperiam unde labore, dolore placeat
-        laudantium fugit adipisci mollitia nam illum ab dolorum quos, delectus nobis ex? And checkout my last startup, <a href="/treks/how-to-get-better-at-coding/">Flex.io</a>
+      <p class="prose prose-lg sm:prose-xl  max-w-none">Thanks for stopping by. I'm a web software entrepreneur who loves amazing tech, good design and
+        backcountry treks. Formerly, I helped build <a href="https://flexio.natewilliams.dev/" target="_blank">Flex.io</a> and
+        <a href="https://goldprairie.natewilliams.dev/" target="_blank">Gold Prairie</a>, where I was Co-founder & CEO. I'm passionate about community, conservation and code.
       </p>
-      <div class="flex justify-center py-16">
-        <img src="../assets/at-my-desk.svg" width="250" alt="at my desk">
-      </div>
     </div>
 
-    <div class="container-inner text-xl border-t border-gray-500 border-b py-16 mb-16">
-      <h2 class="font-bold mb-6">Highlights</h2>
+    <div class="container-inner text-xl py-12 mb-16">
+      <h2 class="font-bold mb-6">Work Highlights</h2>
 
       <ul class="text-lg sm:text-xl space-y-6">
         <li class="checkmark">
