@@ -1,14 +1,17 @@
 <template>
 
     <!-- Nav control -->
-    <PageHeader :isMobile="isMobile" />
+    <PageHeader :isMobile="isMobile" @navOpen="updateNavStatus" />
+
+    <!-- Nav shading; only show on scroll -->
+    <div class="fixed top-0 left-0 right-0 z-30 w-full h-[88px]" :class="(isScrollTop && !isMobile && !isNavOpen) ? 'bg-black/30': 'bg-black/0'"></div>
 
     <!-- Hero area -->
-    <div class="flex items-center text-white bg-blue-400 lg:h-96 w-full" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
+    <div class="flex items-center text-white bg-heroblue lg:h-96 w-full" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
       <div class="container-inner flex flex-col sm:flex-row justify-left items-center py-8 mx-auto">
         <div class="w-full sm:w-3/5 text-center sm:text-left self-center space-y-8 sm:pr-8">
           <div class="text-3xl xl:text-4xl font-bold uppercase">About me</div>
-          <div class="text-2xl leading-10">Highlights from the enterprise software startups I helped build</div>
+          <div class="text-2xl leading-10">What I like to do when I'm not trekking in the Sierras</div>
         </div>
         <div class="mt-8 sm:mt-0">
           <img src="../assets/trekking-in-mountains.svg" width="275" alt="trekking in the mountains" class="mx-auto sm:mx-0 drop-shadow-xl">
@@ -49,6 +52,17 @@
       </div>
     </div>
 
+    <!-- Get in touch -->
+    <div class="text-white bg-stone-500">
+      <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-16">
+          <div class="space-y-8 md:space-y-10 text-center">
+            <div class="text-2xl md:text-3xl">Get in touch</div>
+            <div class="mx-2 md:mx-16">Please feel free to reach out. I'm glad to chat about work, trade thoughts, share feedback, or hear about any opportunities you're excited about.</div>
+            <button class="cta-btn hover:bg-gray-400 hover:bg-opacity-20 pb-10" @click="btnSendEmail">Contact me</button>
+            <SocialMediaLinks :isHome="false" class="flex justify-center" />
+          </div>
+      </div>
+    </div>
 
     <!-- Page footer centered -->
     <div class="h-16">
@@ -58,6 +72,7 @@
 </template>
 
 <script>
+import SocialMediaLinks from '../components/SocialMediaLinks.vue'
 import PageHeader from '../components/PageHeader.vue'
 import PageFooter from '../components/PageFooter.vue'
 import json from '../store/about-technologies-data.json'
@@ -66,6 +81,7 @@ export default {
   name: "BaseAbout",
 
   components: {
+    SocialMediaLinks,
     PageHeader,
     PageFooter,
   },
@@ -73,6 +89,8 @@ export default {
   data: function() {
     return {
       technologies: json.technologies,
+      isNavOpen: false,
+      isScrollTop: false,
       isMobile: false
     };
   },
@@ -81,20 +99,34 @@ export default {
       getImgUrl(imgName) {
         return new URL(`../assets/logos/${imgName}`, import.meta.url).href
       },
+      // open a mail client to handle sending an email
+      btnSendEmail: function() {
+          window.open("mailto:nate@natewilliams.dev");
+      },
+      // emitted value from PageHeader component
+      updateNavStatus(value) {
+        this.isNavOpen = value;
+      },
       // update variable used to select mobile display elements
       handleResize() {
         this.isMobile = (window.innerWidth < 725 || window.innerHeight < 650 || (window.innerWidth < 920 && window.innerHeight < 720) );
       },
+      // check scroll position
+      handleScroll() {
+        this.isScrollTop = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20);
+      },
   },
 
   created() {
-    // add an event listener to the window so we can switch image sizes
     window.addEventListener('resize', this.handleResize)
+    window.addEventListener('scroll', this.handleScroll)
     this.handleResize()
+    this.handleScroll()
   },
 
   destroyed() {
       window.removeEventListener('resize', this.handleResize)
+      window.removeEventListener('scroll', this.handleScroll)
   }
 
 };
@@ -103,48 +135,22 @@ export default {
 <style scoped>
   .heading {
     font-weight: 400;
-    color: #222;
   }
   .subheading {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #222;
   }
   .content {
     line-height: 1.7rem;
-    color: #333;
-  }
-  .section-btn {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: theme('colors.blue.500');
-    padding: 12px 32px 12px 32px;
-    border: 1px solid theme('colors.blue.500');
-    border-radius: 5px;
-  }
-
-  .call-to-action {
-    background-color: #333333;
-  }
-  .cta-heading {
-    font-weight: 400;
-    color: theme('colors.white');
-  }
-  .cta-content {
-    line-height: 1.7rem;
-    color: theme('colors.white');
   }
   .cta-btn {
     text-transform: uppercase;
     font-weight: bold;
-    padding: 12px 32px 12px 32px;
     color: theme('colors.white');
-    background-color: theme('colors.blue.500');
-    border: 1px solid theme('colors.blue.500');
-    border-radius: 5px;
-  }
-  .cta-btn:hover {
+    padding: 10px 28px 10px 28px;
     border: 1px solid theme('colors.white');
+    border-radius: 25px;
   }
+
 
 </style>

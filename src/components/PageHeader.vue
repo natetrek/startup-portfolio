@@ -1,5 +1,6 @@
 <template>
   <div class="top-0 left-0 z-40 fixed w-full" :class="isMobile ? 'bg-white': 'bg-transparent'">
+    <!-- right nav closed -->
     <div class="container-inner flex flex-wrap justify-between items-center mx-auto py-8">
       <div v-if="isMobile"><!-- include logo on top nav for all mobile screen pages -->
         <router-link to="/" @click.native="scrollToTop">
@@ -7,14 +8,17 @@
         </router-link>
       </div>
     </div>
+    <!-- burger -->
     <div :class="!isOpen ? 'absolute right-0 top-0 p-8': 'hidden'">
       <button @click="toggleBurger" class="flex items-center">
-        <svg class="h-6 w-6" :class="isMobile ? 'fill-myblue': 'fill-white'" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+        <svg class="h-6 w-6" :class="isMobile ? 'fill-textblue': 'fill-white'" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
       </button>
     </div>
-    <div class="nav-btn-container w-full bg-gray-800/70 lg:bg-gray-800/60 h-screen w-52 lg:w-60 py-8"
-        :class="isOpen ? 'absolute right-0 top-0': 'hidden'"
+    <!-- right nav open -->
+    <div class="nav-btn-container w-full h-screen w-52 lg:w-60 py-8"
+        :class="(isOpen ? 'absolute right-0 top-0': 'hidden'), (isMobile ? 'bg-gray-800/70': 'bg-gray-800/60')"
     >
+      <!-- close (x) -->
       <div class="flex justify-end lg:pb-2 pr-7">
         <button @click="toggleBurger">
           <svg class="h-7 w-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
@@ -49,28 +53,32 @@
     methods: {
       scrollToTop() {
         this.isOpen = false
+        this.$emit('navOpen', this.isOpen)
         window.scrollTo(0,0);
       },
       closeBurger() {
         this.isOpen = false
+        this.$emit('navOpen', this.isOpen)
         window.scrollTo(0,0);
       },
       toggleBurger() {
         this.isOpen = !this.isOpen
+        this.$emit('navOpen', this.isOpen)
       }
     }
   }
 </script>
 
 <style scoped>
-.nav-btn{
+.nav-btn {
   font-size: 1.4em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.025em;
   color: theme('colors.white');
 }
-.nav-btn:hover{
+.nav-btn:hover {
    background-color:rgb(0,0,0,0.3);
 }
+
 </style>
