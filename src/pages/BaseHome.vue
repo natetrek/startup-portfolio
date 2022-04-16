@@ -1,7 +1,7 @@
 <template>
   <!-- Non-mobile display -->
   <div v-if="!isMobile" class="flex">
-    <PageHeader :isMobile="isMobile" />
+    <PageHeader :isMobile="isMobile" :isBlue=false />
     <div class="flex flex-col basis-2/5 h-screen px-4 pt-12 pb-20">
         <div class="container-inner flex flex-col grow mx-auto">
           <div class="basis-1/5 pb-8 lg:pb-12">
@@ -33,7 +33,7 @@
   </div>
   <!-- Mobile display -->
   <div v-else>
-    <PageHeader :isMobile="isMobile" />
+    <PageHeader :isMobile="isMobile" :isBlue=false />
     <div class="container-inner mx-auto py-8">
       <div class="pb-12"><img src="../assets/nate-williams-logo-180.svg" alt="nate-williams-logo" width="180" /></div>
       <div>

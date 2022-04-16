@@ -11,7 +11,7 @@
     <!-- burger -->
     <div :class="!isOpen ? 'absolute right-0 top-0 p-8': 'hidden'">
       <button @click="toggleBurger" class="flex items-center">
-        <svg class="h-6 w-6" :class="isMobile ? 'fill-textblue': 'fill-white'" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+        <svg class="h-6 w-6" :class="(isMobile || isBlue) ? 'fill-heroblue': 'fill-white'" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
       </button>
     </div>
     <!-- right nav open -->
@@ -41,29 +41,31 @@
       isMobile: {
           type: Boolean,
           required: true
+      },
+      isBlue: {
+          type: Boolean,
+          required: true
       }
     },
 
-    data() {
-      return {
-        isOpen: false,
-      }
-    },
+  data: function() {
+    return {
+      isOpen: false,
+    };
+  },
+
 
     methods: {
       scrollToTop() {
         this.isOpen = false
-        this.$emit('navOpen', this.isOpen)
         window.scrollTo(0,0);
       },
       closeBurger() {
         this.isOpen = false
-        this.$emit('navOpen', this.isOpen)
         window.scrollTo(0,0);
       },
       toggleBurger() {
         this.isOpen = !this.isOpen
-        this.$emit('navOpen', this.isOpen)
       }
     }
   }

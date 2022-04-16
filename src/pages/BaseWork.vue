@@ -1,10 +1,7 @@
 <template>
 
     <!-- Nav control -->
-    <PageHeader :isMobile="isMobile" @navOpen="updateNavStatus" />
-
-    <!-- Nav shading; only show on scroll -->
-    <div class="fixed top-0 left-0 right-0 z-30 w-full h-[88px]" :class="(isScrollTop && !isMobile && !isNavOpen) ? 'bg-black/30': 'bg-black/0'"></div>
+    <PageHeader :isMobile="isMobile" :isBlue="isBlue" />
 
     <!-- Hero area -->
     <div class="flex items-center text-white bg-[#6facf2] w-full lg:h-96" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
@@ -82,24 +79,19 @@ export default {
 
   data: function() {
     return {
-      isNavOpen: false,
-      isScrollTop: false,
+      isBlue: false,
       isMobile: false,
     };
   },
 
   methods : {
-      // emitted value from PageHeader component
-      updateNavStatus(value) {
-        this.isNavOpen = value;
-      },
       // update variable used to select mobile display elements
       handleResize() {
         this.isMobile = (window.innerWidth < 725 || window.innerHeight < 650 || (window.innerWidth < 920 && window.innerHeight < 720) );
       },
       // check scroll position
       handleScroll() {
-        this.isScrollTop = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20);
+        this.isBlue = (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350);
       },
   },
 
