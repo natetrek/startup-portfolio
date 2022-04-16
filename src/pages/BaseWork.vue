@@ -4,7 +4,7 @@
     <PageHeader :isMobile="isMobile" :isBlue="isBlue" />
 
     <!-- Hero area -->
-    <div class="flex items-center text-white bg-[#6facf2] w-full lg:h-96" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
+    <div id="hero" class="flex items-center text-white bg-[#6facf2] w-full lg:h-96" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
       <div class="container-inner flex flex-col sm:flex-row justify-left items-center py-8 mx-auto">
         <div class="w-full sm:w-3/5 text-center sm:text-left self-center space-y-8 sm:pr-8">
           <div class="text-3xl lg:text-4xl font-bold uppercase">Work</div>
@@ -89,9 +89,13 @@ export default {
       handleResize() {
         this.isMobile = (window.innerWidth < 725 || window.innerHeight < 650 || (window.innerWidth < 920 && window.innerHeight < 720) );
       },
-      // check scroll position
+      // on scroll, check if we need switch the color of the buger icon from white to blue after scrolling past the hero area
       handleScroll() {
-        this.isBlue = (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350);
+        // the default is set based on the window YOffset until the "hero" element is available in the DOM
+        if (document.getElementById("hero"))
+          this.isBlue = window.pageYOffset > (document.getElementById("hero").clientHeight - 50)
+        else
+          this.isBlue = window.pageYOffset > 335
       },
   },
 
