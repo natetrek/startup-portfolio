@@ -19,11 +19,19 @@
     <!-- Building great products -->
     <div class="bg-white">
       <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-16 border-t border-gray-300">
-          <div class="space-y-8 md:space-y-12 pt-4 md:pt-8">
+          <div class="space-y-8 pt-4 md:pt-8">
             <div class="text-2xl md:text-3xl text-center">Building Great Products</div>
-            <div class="leading-7">Gold Prairie pinpoints payment errors automatically and delivers them directly to your internal staff—day and night, rain or shine. Rather than waiting for an outside audit to uncover these errors, you can identify and address them immediately, before they become a drain on your profits.</div>
+            <div class="leading-7">A big reason love building great products are the amazing people I've had the privilidge to work with.</div>
+            <div class="leading-7">I've had the unforgetable experience of building several pioneering products in collaboration with a great group of highly skilled, unrelenting developers and a community of fantastic customers. We laughed, we cried, and we shipped, and shipped again, pushing the boundaries of tech in the process.</div>
             <CustomerLogos class="flex justify-center" />
           </div>
+      </div>
+    </div>
+
+    <!-- Building great products -->
+    <div class="bg-white">
+      <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 border-y border-gray-300">
+            <div class="text-3xl font-medium text-center text-stone-800 leading-normal mx-8">“Learn early. Learn often.”  —Drew Houston</div>
       </div>
     </div>
 
@@ -32,7 +40,7 @@
       <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-16 border-t border-gray-300">
           <div class="space-y-8 md:space-y-12 pt-4 md:pt-8">
             <div class="text-2xl md:text-3xl text-center">Design & Development</div>
-            <div class="leading-7">Gold Prairie pinpoints payment errors automatically and delivers them directly to your internal staff—day and night, rain or shine. Rather than waiting for an outside audit to uncover these errors, you can identify and address them immediately, before they become a drain on your profits.</div>
+            <div class="leading-7">I love web design and writing code, both professionally and for personal projects. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat velit corporis, et vel excepturi deserunt aspernatur architecto veritatis, eaque voluptas, ea ullam qui autem? Possimus perspiciatis nam itaque delectus tempore?</div>
           </div>
       </div>
     </div>
@@ -106,7 +114,7 @@ export default {
       },
       // on scroll, check if we need switch the color of the buger icon from white to blue after scrolling past the hero area
       handleScroll() {
-        // the default is set based on the window YOffset until the "hero" element is available in the DOM
+        // if hero element is not in the DOM yet, use default of 335
         if (document.getElementById("hero"))
           this.isBlue = window.pageYOffset > (document.getElementById("hero").clientHeight - 50)
         else
