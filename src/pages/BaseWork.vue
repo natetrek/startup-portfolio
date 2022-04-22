@@ -18,7 +18,7 @@
 
     <!-- Intro -->
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
-        <div class="space-y-4 leading-7 pt-4 md:pt-8">
+        <div class="space-y-4 leading-7 pt-4">
           <div>Welcome to a brief tour of my startup experience.</div>
           <div>
             I led product development, built nifty new things, and kept customers happy at three enterprise software startups over 15+ years:
@@ -59,14 +59,18 @@
         <div class="text-sm">Product demo video</div>
       </div>
       <div class="basis-1/2 mx-4">
-        <div class="space-y-4">
+        <div class="space-y-4 leading-7">
           <div class="font-bold">What I did at Flex.io</div>
           <div>We built Flex.io so managers and other business users could get live data from the cloud directly in Microsoft Excel and Google Sheets without having to write any code or go through an IT project. Our mantra was: "import data with a formula."</div>
-          <div>I led the product development team, focusing on user experience (UX) and product-market fit. Some highlights from this were demoing an early version at PyCon Startup Row and proving out new features with customers.</div>
+          <div>I led the product development team, focusing on user experience (UX) and product-market fit.</div>
+          <div>Some favorite highlights were demoing an early version at PyCon Startup Row and proving out new features with forward-thinking customers, like <a href="https://www.crunchbase.com/" target="_blank" class="font-semibold text-textblue">Crunchbase</a>.</div>
           <div class="font-bold pt-4">What I learned</div>
           <div>Flex.io was a cloud service for integrating data from popular Web apps (HubSpot, Shopify, etc.) directly into Microsoft Excel and Google Sheets.</div>
-          <div>We built it so managers and other non-technical users could get live data from the cloud without having to write code or go through an IT project. Our mantra was: "import data with a formula."</div>
-          <div>I led the product development team, focusing on user experience (UX) and product-market fit. Some highlights from this were demoing an early version at PyCon Startup Row and proving out new features with customers.</div>
+          <ul class="space-y-4 list-disc pl-8">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem</li>
+          </ul>
         </div>
       </div>
     </div>
