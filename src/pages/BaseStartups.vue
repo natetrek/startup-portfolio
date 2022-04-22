@@ -20,7 +20,7 @@
       </div>
       <div class="prose max-w-none flex-auto sm:w-2/3 sm:pl-8">
         <h2>Flex.io</h2>
-        <TestPost />
+        <p>Flex.io was a cloud service for integrating data from Web apps directly into Microsoft Excel and Google Sheets. It gave business users a way to lookup live data from the cloud without having to write any code.</p>
       </div>
     </div>
 
