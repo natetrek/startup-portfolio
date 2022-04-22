@@ -36,6 +36,7 @@ module.exports = {
         white: '#fff',
         textblue:  '#1c75bc',
         heroblue: '#6facf2',
+        stone75: '#f7f7f7',
       },
     },
     container: {

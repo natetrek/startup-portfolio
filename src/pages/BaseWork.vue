@@ -16,17 +16,22 @@
       </div>
     </div>
 
-
     <!-- Intro -->
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
-        <div class="space-y-4 pt-4 md:pt-8">
-          <div class="leading-7">Welcome to a guided tour of my startup portfolio.</div>
-          <div class="leading-7">As Steve Jobs said, “Design is not just what it looks like and feels like. Design is how it works.” I took that to heart. That and, as Drew Houston said, "Learn early. Learn often."</div>
+        <div class="space-y-4 leading-7 pt-4 md:pt-8">
+          <div>Welcome to a brief tour of my startup experience.</div>
+          <div>
+            I led product development, built nifty new things, and kept customers happy at three enterprise software startups over 15+ years:
+            <router-link to="/work#flexio"><span class="font-bold text-textblue">Flex.io</span></router-link>,
+            <router-link to="/work#goldprairie"><span class="font-bold text-textblue">Gold Prairie</span></router-link>, and
+            <router-link to="/work#kirix"><span class="font-bold text-textblue">Kirix</span></router-link>.
+          </div>
+          <div>Some say building a startup is like trying to assemble a plane while you're flying it, but I think it's more like shooting the rapids on a surfboard. Here are some things I learned along the way.</div>
         </div>
     </div>
 
     <!-- Flex.io summary -->
-    <div class="container-inner flex flex-col md:flex-row mx-auto py-8 border-y border-gray-300">
+    <div id="flexio" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone75">
       <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
         <a href="https://flexio.natewilliams.dev/" target="_blank">
           <img  src="../assets/flexio-logo.png" alt="Flex.io logo">
@@ -54,14 +59,20 @@
         <div class="text-sm">Product demo video</div>
       </div>
       <div class="basis-1/2 mx-4">
-        <div class="space-y-8">
-          <div>Flex.io was a cloud service for integrating data from popular web apps, like HubSpot and Shopify, directly into Microsoft Excel and Google Sheets. <br><br> It gave non-technical users a way to lookup data from web API without having to write any code.</div>
+        <div class="space-y-4">
+          <div class="font-bold">What I did at Flex.io</div>
+          <div>We built Flex.io so managers and other business users could get live data from the cloud directly in Microsoft Excel and Google Sheets without having to write any code or go through an IT project. Our mantra was: "import data with a formula."</div>
+          <div>I led the product development team, focusing on user experience (UX) and product-market fit. Some highlights from this were demoing an early version at PyCon Startup Row and proving out new features with customers.</div>
+          <div class="font-bold pt-4">What I learned</div>
+          <div>Flex.io was a cloud service for integrating data from popular Web apps (HubSpot, Shopify, etc.) directly into Microsoft Excel and Google Sheets.</div>
+          <div>We built it so managers and other non-technical users could get live data from the cloud without having to write code or go through an IT project. Our mantra was: "import data with a formula."</div>
+          <div>I led the product development team, focusing on user experience (UX) and product-market fit. Some highlights from this were demoing an early version at PyCon Startup Row and proving out new features with customers.</div>
         </div>
       </div>
     </div>
 
     <!-- Gold Prairie summary -->
-    <div class="container-inner flex flex-col md:flex-row mx-auto py-8 border-y border-gray-300">
+    <div id="goldprairie" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone75">
       <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
         <a href="https://goldprairie.natewilliams.dev/" target="_blank">
           <img  src="../assets/gp-logo.png" alt="Gold Prairie logo" class="w-3/4 mx-auto">
@@ -71,7 +82,7 @@
         <div class="space-y-2">
           <div class="text-xl font-bold">Gold Prairie</div>
           <div>Enterprise SaaS solution for identifying and preventing payment errors</div>
-          <div>Successfully exited in 2019 via a private sale</div>
+          <div>Exited in 2019 via a private sale</div>
         </div>
       </div>
     </div>
@@ -93,7 +104,7 @@
 
 
     <!-- Kirix summary -->
-    <div class="container-inner flex flex-col md:flex-row mx-auto py-8 border-y border-gray-300">
+    <div id="kirix" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone75">
       <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
         <a href="https://www.kirix.com/" target="_blank">
           <img  src="../assets/kirix-logo.png" alt="Kirix logo" class="w-3/5 mx-auto">
