@@ -21,7 +21,7 @@
         <div class="prose max-w-none space-y-4 pt-4">
           <div>Welcome to a brief tour of my startup experience.</div>
           <div>
-            I led product development, built nifty new things, and kept customers happy at three enterprise software startups:
+            I led product development, built nifty, new things, and kept customers happy at three enterprise software startups:
             <router-link to="/work#flexio">Flex.io</router-link>,
             <router-link to="/work#goldprairie">Gold Prairie</router-link>, and
             <router-link to="/work#kirix">Kirix</router-link>.
@@ -40,7 +40,7 @@
       <div class="basis-2/3">
         <div class="space-y-2">
           <div class="text-xl font-bold">Flex.io</div>
-          <div>#NoCode platform for delvering data from cloud apps to spreadsheets</div>
+          <div>#NoCode platform for delivering data from cloud apps to spreadsheets</div>
           <div>Launched at PyCon Startup Row in 2017 and operated through 2020</div>
         </div>
       </div>
@@ -61,7 +61,7 @@
       <div class="basis-1/2 mx-2">
         <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Flex.io</div>
-          <div>Flex.io was a cloud service for directly integrating data from Web apps into Microsoft Excel and Google Sheets. It gave spreadsheet users a way to get live, refreshable data from the cloud without having to write code or go through an IT project.</div>
+          <div>Flex.io was a cloud service for integrating data from Web apps directly into Microsoft Excel and Google Sheets. It gave spreadsheet users a way to get live, refreshable data from the cloud without having to write code or go through an IT project.</div>
           <div>I led the product development team, focusing on user experience (UX) and product-market fit.</div>
           <div>With the team, I also built a <a href="https://flexio.natewilliams.dev/explore/" target="_blank">product showcase</a> and <a href="https://flexio.natewilliams.dev/integrations/" target="_blank">spreadsheet template portal</a> for key cloud integrations, including BigCommerce, Crunchbase, HubSpot, Intercom, and Shopify.</div>
           <div class="font-bold pt-4">Highlights</div>
@@ -110,7 +110,7 @@
           <div>I led product development and managed all aspects of the product lifecycle from initial market validation to delivering the solution and building customer relationships.</div>
           <div>After 10+ years of growing the company, including raising a small investment round, we successfully exited via a private sale in 2019.</div>
           <div class="font-bold pt-4">Highlights</div>
-          <div>Gold Prairie delivered great results and this led to many long-term relationships with customers (5+ years). Some other things I'm proud of include:</div>
+          <div>Gold Prairie delivered great results and this led to many long-term relationships with our customers (5+ years). Additional things I'm proud of include:</div>
           <ul class="space-y-4 pl-8">
             <li>Deploying the solution at 30+ enterprise customers, including
               <a href="https://www.astellas.com/en/" target="_blank">Astellas Pharma</a>,
@@ -154,7 +154,7 @@
         <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Kirix</div>
           <div>Kirix was an <a href="https://en.wikipedia.org/wiki/Kirix_Strata" target="_blank">award-winning productivity tool</a> for transforming, cleaning, and analyzing data. It also incorporated a built-in web browser for opening and working with CSV files on the web.</div>
-          <div>Kirix was a team effort, built by a small group of founders. I focused primarily on product strategy, product development, and sales and marketing.</div>
+          <div>Kirix was a team effort by a small group of founders. I focused primarily on product strategy, product development, and sales and marketing.</div>
           <div class="font-bold pt-4">Highlights</div>
           <div>Kirix garnered media attention and impressed a lot of people, but in many ways it was ahead of its time. We were pioneering data preparation before that became its own product category. Some highlights include:</div>
           <ul class="space-y-4 pl-8">
