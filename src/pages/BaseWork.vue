@@ -31,7 +31,7 @@
     </div>
 
     <!-- Flex.io summary -->
-    <div id="flexio" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone75">
+    <div id="flexio" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone-100">
       <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
         <a href="https://flexio.natewilliams.dev/" target="_blank">
           <img  src="../assets/flexio-logo.png" alt="Flex.io logo">
@@ -50,33 +50,33 @@
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
       <div v-if="!isMobile" class="basis-1/2 space-y-6 text-center mx-4">
         <a href="https://flexio.natewilliams.dev/" target="_blank">
-          <img  src="../assets/flexio-work-01.png" alt="Flex.io formula example in Excel" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+          <img  src="../assets/flexio-work-01.png" alt="Flex.io website (archive)" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
         </a>
         <div class="text-sm pb-12">Flex.io website (archive)</div>
         <a href="https://youtu.be/y9PYtsVnpHk" target="_blank">
-          <img  src="../assets/flexio-work-02.png" alt="Flex.io formula example in Excel" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+          <img  src="../assets/flexio-work-02.png" alt="Flex.io product demo video" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
         </a>
         <div class="text-sm">Product demo video</div>
       </div>
-      <div class="basis-1/2 mx-4">
+      <div class="basis-1/2 mx-2">
         <div class="space-y-4 leading-7">
           <div class="font-bold">What I did at Flex.io</div>
-          <div>We built Flex.io so managers and other business users could get live data from the cloud directly in Microsoft Excel and Google Sheets without having to write any code or go through an IT project. Our mantra was: "import data with a formula."</div>
+          <div>Flex.io was a cloud service for directly integrating data from Web apps into Microsoft Excel and Google Sheets, so business users could get live, refreshable data from the cloud without having to write any code or go through an IT project.</div>
           <div>I led the product development team, focusing on user experience (UX) and product-market fit.</div>
-          <div>Some favorite highlights were demoing an early version at PyCon Startup Row and proving out new features with forward-thinking customers, like <a href="https://www.crunchbase.com/" target="_blank" class="font-semibold text-textblue">Crunchbase</a>.</div>
-          <div class="font-bold pt-4">What I learned</div>
-          <div>Flex.io was a cloud service for integrating data from popular Web apps (HubSpot, Shopify, etc.) directly into Microsoft Excel and Google Sheets.</div>
+          <div>With the team, I also built a <a href="https://flexio.natewilliams.dev/explore/" target="_blank" class="font-semibold text-textblue">product showcase</a> and <a href="https://flexio.natewilliams.dev/integrations/" target="_blank" class="font-semibold text-textblue">spreadsheet template portal</a> for key cloud integrations, including BigCommerce, Crunchbase, HubSpot, Intercom, and Shopify.</div>
+          <div class="font-bold pt-4">Building something new</div>
+          <div>Flex.io pushed the envelope with technologies that were completely new at the time, from serverless, API-driven data feeds to new features in Excel. This provided some memorable highlights:</div>
           <ul class="space-y-4 list-disc pl-8">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem</li>
+            <li>Demoing an early version with serverless data feeds and a CLI at <a href="https://us.pycon.org/2017/events/startup_row/" target="_blank" class="font-semibold text-textblue">PyCon Startup Row</a></li>
+            <li>Working as an early test partner with the Microsoft Office product team to leverage their new <a href="https://techcommunity.microsoft.com/t5/excel-blog/preview-of-dynamic-arrays-in-excel/ba-p/252944" target="_blank" class="font-semibold text-textblue">Dynamic Arrays feature</a> in Excel.</li>
+            <li>Proving out new opportunities with forward-thinking customers, like <a href="https://flexio.natewilliams.dev/crunchbase/" target="_blank" class="font-semibold text-textblue">Crunchbase</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <!-- Gold Prairie summary -->
-    <div id="goldprairie" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone75">
+    <div id="goldprairie" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone-100">
       <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
         <a href="https://goldprairie.natewilliams.dev/" target="_blank">
           <img  src="../assets/gp-logo.png" alt="Gold Prairie logo" class="w-3/4 mx-auto">
@@ -95,20 +95,34 @@
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
       <div v-if="!isMobile" class="basis-1/2 space-y-6 text-center mx-4">
         <a href="https://goldprairie.natewilliams.dev/" target="_blank">
-          <img  src="../assets/gp-work-01.png" alt="Flex.io formula example in Excel" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+          <img  src="../assets/gp-work-01.png" alt="Gold Prairie home page (archive)" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
         </a>
-        <div class="text-sm pb-8">Gold Prairie home page (archive)</div>
+        <div class="text-sm pb-12">Gold Prairie home page (archive)</div>
+        <a href="https://www.crunchbase.com/organization/gold-prairie" target="_blank">
+          <img  src="../assets/gp-work-02.png" alt="Gold Prairie company profile on Crunchbase" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+        </a>
+        <div class="text-sm pb-12">Company profile on Crunchbase</div>
       </div>
-      <div class="basis-1/2 mx-4">
-        <div class="space-y-8">
-          <div>Flex.io was a cloud service for integrating data from popular web apps, like HubSpot and Shopify, directly into Microsoft Excel and Google Sheets. <br><br> It gave non-technical users a way to lookup data from web API without having to write any code.</div>
+      <div class="basis-1/2 mx-2">
+        <div class="space-y-4 leading-7">
+          <div class="font-bold">What I did at Gold Prairie</div>
+          <div>Flex.io was a cloud service for directly integrating data from Web apps into Microsoft Excel and Google Sheets, so business users could get live, refreshable data from the cloud without having to write any code or go through an IT project.</div>
+          <div>I led the product development team, focusing on user experience (UX) and product-market fit.</div>
+          <div>Some highlights for me were demoing an early version at <a href="https://us.pycon.org/2017/events/startup_row/" target="_blank" class="font-semibold text-textblue">PyCon Startup Row</a> and proving out new features with forward-thinking customers, like <a href="https://www.crunchbase.com/" target="_blank" class="font-semibold text-textblue">Crunchbase</a>.</div>
+          <div class="font-bold pt-4">What I learned</div>
+          <div>Flex.io was a cloud service for integrating data from popular Web apps (HubSpot, Shopify, etc.) directly into Microsoft Excel and Google Sheets.</div>
+          <ul class="space-y-4 list-disc pl-8">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem</li>
+          </ul>
         </div>
       </div>
     </div>
 
 
     <!-- Kirix summary -->
-    <div id="kirix" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone75">
+    <div id="kirix" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone-100">
       <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
         <a href="https://www.kirix.com/" target="_blank">
           <img  src="../assets/kirix-logo.png" alt="Kirix logo" class="w-3/5 mx-auto">
@@ -127,11 +141,11 @@
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
       <div v-if="!isMobile" class="basis-1/2 space-y-6 text-center mx-4">
         <a href="https://youtu.be/3pA-W63oJYU" target="_blank">
-          <img  src="../assets/kirix-work-01.png" alt="Flex.io formula example in Excel" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+          <img  src="../assets/kirix-work-01.png" alt="Kirix product demo video" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
         </a>
         <div class="text-sm pb-8">Product demo video</div>
       </div>
-      <div class="basis-1/2 mx-4">
+      <div class="basis-1/2 mx-2">
         <div class="space-y-8">
           <div>Flex.io was a cloud service for integrating data from popular web apps, like HubSpot and Shopify, directly into Microsoft Excel and Google Sheets. <br><br> It gave non-technical users a way to lookup data from web API without having to write any code.</div>
         </div>
