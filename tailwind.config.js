@@ -18,6 +18,7 @@ module.exports = {
             css: {
               a: {
                 color: theme(`colors.textblue`),
+                fontWeight: 600,
                 textDecoration: null,
                 "&:hover": {
                   textDecoration: `underline`,

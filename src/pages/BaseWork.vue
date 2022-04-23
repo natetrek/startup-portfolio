@@ -11,22 +11,22 @@
           <div class="text-2xl leading-10">Highlights from the enterprise software startups I helped build</div>
         </div>
         <div class="mt-8 sm:mt-0">
-          <img src="../assets/rocket-in-clouds.svg" width="275" alt="trekking in the mountains" class="mx-auto sm:mx-0 drop-shadow-xl">
+          <img src="../assets/rocket-in-clouds.svg" width="275" alt="rocket taking off through the clouds" class="mx-auto sm:mx-0 drop-shadow-xl">
         </div>
       </div>
     </div>
 
     <!-- Intro -->
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
-        <div class="space-y-4 leading-7 pt-4">
+        <div class="prose max-w-none space-y-4 pt-4">
           <div>Welcome to a brief tour of my startup experience.</div>
           <div>
             I led product development, built nifty new things, and kept customers happy at three enterprise software startups over 15+ years:
-            <router-link to="/work#flexio"><span class="font-bold text-textblue">Flex.io</span></router-link>,
-            <router-link to="/work#goldprairie"><span class="font-bold text-textblue">Gold Prairie</span></router-link>, and
-            <router-link to="/work#kirix"><span class="font-bold text-textblue">Kirix</span></router-link>.
+            <router-link to="/work#flexio">Flex.io</router-link>,
+            <router-link to="/work#goldprairie">Gold Prairie</router-link>, and
+            <router-link to="/work#kirix">Kirix</router-link>.
           </div>
-          <div>Some say building a startup is like trying to assemble a plane while you're flying it, but I think it's more like shooting the rapids on a surfboard. Here are some things I learned along the way.</div>
+          <div>Some say building a startup is like trying to assemble an airplane while you're flying it, but I think it's more like shooting the rapids on a surfboard. Here are some things I learned along the way.</div>
         </div>
     </div>
 
@@ -59,17 +59,17 @@
         <div class="text-sm">Product demo video</div>
       </div>
       <div class="basis-1/2 mx-2">
-        <div class="space-y-4 leading-7">
+        <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Flex.io</div>
-          <div>Flex.io was a cloud service for directly integrating data from Web apps into Microsoft Excel and Google Sheets, so business users could get live, refreshable data from the cloud without having to write any code or go through an IT project.</div>
+          <div>Flex.io was a cloud service for directly integrating data from Web apps into Microsoft Excel and Google Sheets. It gave spreadsheet users a way to get live, refreshable data from the cloud without having to write code or go through an IT project.</div>
           <div>I led the product development team, focusing on user experience (UX) and product-market fit.</div>
-          <div>With the team, I also built a <a href="https://flexio.natewilliams.dev/explore/" target="_blank" class="font-semibold text-textblue">product showcase</a> and <a href="https://flexio.natewilliams.dev/integrations/" target="_blank" class="font-semibold text-textblue">spreadsheet template portal</a> for key cloud integrations, including BigCommerce, Crunchbase, HubSpot, Intercom, and Shopify.</div>
-          <div class="font-bold pt-4">Building something new</div>
-          <div>Flex.io pushed the envelope with technologies that were completely new at the time, from serverless, API-driven data feeds to new features in Excel. This provided some memorable highlights:</div>
-          <ul class="space-y-4 list-disc pl-8">
-            <li>Demoing an early version with serverless data feeds and a CLI at <a href="https://us.pycon.org/2017/events/startup_row/" target="_blank" class="font-semibold text-textblue">PyCon Startup Row</a></li>
-            <li>Working as an early test partner with the Microsoft Office product team to leverage their new <a href="https://techcommunity.microsoft.com/t5/excel-blog/preview-of-dynamic-arrays-in-excel/ba-p/252944" target="_blank" class="font-semibold text-textblue">Dynamic Arrays feature</a> in Excel.</li>
-            <li>Proving out new opportunities with forward-thinking customers, like <a href="https://flexio.natewilliams.dev/crunchbase/" target="_blank" class="font-semibold text-textblue">Crunchbase</a></li>
+          <div>With the team, I also built a <a href="https://flexio.natewilliams.dev/explore/" target="_blank">product showcase</a> and <a href="https://flexio.natewilliams.dev/integrations/" target="_blank">spreadsheet template portal</a> for key cloud integrations, including BigCommerce, Crunchbase, HubSpot, Intercom, and Shopify.</div>
+          <div class="font-bold pt-4">Highlights</div>
+          <div>Flex.io combined a number of technologies that were completely new at the time, from serverless, API-driven data feeds to new features in Excel. This provided some memorable moments:</div>
+          <ul class="space-y-4 pl-8">
+            <li>Demoing an early version with serverless data feeds and a CLI at <a href="https://us.pycon.org/2017/events/startup_row/" target="_blank">PyCon Startup Row</a></li>
+            <li>Working as an early test partner with the Microsoft Office product team to leverage their new <a href="https://techcommunity.microsoft.com/t5/excel-blog/preview-of-dynamic-arrays-in-excel/ba-p/252944" target="_blank">Dynamic Arrays feature</a> in Excel</li>
+            <li>Collaborating on creating new services with forward-thinking customers, like <a href="https://flexio.natewilliams.dev/crunchbase/" target="_blank">Crunchbase</a></li>
           </ul>
         </div>
       </div>
@@ -104,17 +104,22 @@
         <div class="text-sm pb-12">Company profile on Crunchbase</div>
       </div>
       <div class="basis-1/2 mx-2">
-        <div class="space-y-4 leading-7">
+        <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Gold Prairie</div>
-          <div>Flex.io was a cloud service for directly integrating data from Web apps into Microsoft Excel and Google Sheets, so business users could get live, refreshable data from the cloud without having to write any code or go through an IT project.</div>
-          <div>I led the product development team, focusing on user experience (UX) and product-market fit.</div>
-          <div>Some highlights for me were demoing an early version at <a href="https://us.pycon.org/2017/events/startup_row/" target="_blank" class="font-semibold text-textblue">PyCon Startup Row</a> and proving out new features with forward-thinking customers, like <a href="https://www.crunchbase.com/" target="_blank" class="font-semibold text-textblue">Crunchbase</a>.</div>
-          <div class="font-bold pt-4">What I learned</div>
-          <div>Flex.io was a cloud service for integrating data from popular Web apps (HubSpot, Shopify, etc.) directly into Microsoft Excel and Google Sheets.</div>
-          <ul class="space-y-4 list-disc pl-8">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem</li>
+          <div>Gold Prairie was a <a href="https://www.investopedia.com/terms/f/fintech.asp" target="_blank">Fintech solution</a> for identifying and preventing payment errors, such as duplicate payments and missed discounts. It operated as an automated, internal financial control for accounting staff at large organizations.</div>
+          <div>I led product development and managed all aspects of the product lifecycle from initial market validation to delivering the solution and building customer relationships.</div>
+          <div>After 10+ years of growing the company, including raising a small investment round, we successfully exited via a private sale in 2019.</div>
+          <div class="font-bold pt-4">Highlights</div>
+          <div>Gold Prairie delivered great results and this led to many long-term relationships with customers (5+ years). Some things I'm proud of include:</div>
+          <ul class="space-y-4 pl-8">
+            <li>Deploying the solution at 30+ enterprise customers, including
+              <a href="https://www.astellas.com/en/" target="_blank">Astellas Pharma</a>,
+              <a href="https://www.redcross.org/" target="_blank">American Red Cross</a>,
+              <a href="https://www.condenast.com/" target="_blank">Condé Nast</a>,
+              <a href="https://www.jcpenney.com/" target="_blank">JC Penney</a>, and
+             <a href="https://www.medline.com/" target="_blank">Medline Industries</a></li>
+            <li>Cutting the timeframe for recovering funds from 1-2 years average to less than a month</li>
+            <li>Generating an average of $2 million annual savings per customer</li>
           </ul>
         </div>
       </div>
@@ -146,12 +151,25 @@
         <div class="text-sm pb-8">Product demo video</div>
       </div>
       <div class="basis-1/2 mx-2">
-        <div class="space-y-8">
-          <div>Flex.io was a cloud service for integrating data from popular web apps, like HubSpot and Shopify, directly into Microsoft Excel and Google Sheets. <br><br> It gave non-technical users a way to lookup data from web API without having to write any code.</div>
+        <div class="prose max-w-none space-y-4">
+          <div class="font-bold">What I did at Kirix</div>
+          <div>Kirix Strata was an <a href="https://en.wikipedia.org/wiki/Kirix_Strata" target="_blank">award-winning productivity tool</a> for transforming, cleaning, and analyzing data. It also incorporated a built-in web browser for opening and working with CSV files on the web.</div>
+          <div>I managed product strategy and led product development through all stages, from prototyping and testing to customer acquisition, onboarding and support.</div>
+          <div class="font-bold pt-4">Highlights</div>
+          <div>Kirix Strata impressed a lot of people and garnered media attention, but in many respects it was ahead of its time. We were pioneering data preparation on large data sets before “Big Data” was a thing.</div>
+          <div>Here are some highlights from this journey:</div>
+          <ul class="space-y-4 pl-8">
+            <li><a href="https://www.idg.co.uk/news/winners-of-product-excellence-awards-announced-at-linuxworld-conference-idg-world-expo-and-linuxworld-magazine-reward-product-and-service-innovation/" target="_blank">Winning the Product Excellence Award</a> at LinuxWorld Boston 2005 for the “Best Desktop-Productivity-Business Application,” beating Sun Microsystems’s StarOffice</li>
+            <li>Generating media coverage from
+              <a href="https://www.infoworld.com/article/2643790/kirix-data-base-app-debuts.html" target="_blank">InfoWorld</a>,
+              <a href="https://www.theregister.com/2007/08/07/kirix_browser_database/" target="_blank">The Register</a>,
+              <a href="https://web.archive.org/web/20110522081406/http://blogs.computerworld.com/kirix_data_browser?rec=1" target="_blank">Computerworld</a>,
+              and other tech news sources</li>
+            <li>Delivering a unique, innovative data analytic feature set, including dynamic calculations across 100+ million records, linking data sets, and browsing Web-based data</li>
+          </ul>
         </div>
       </div>
     </div>
-
 
     <!-- Get in touch -->
     <div class="text-white bg-stone-500">
@@ -174,7 +192,6 @@
 
 <script>
 import SocialMediaLinks from '../components/SocialMediaLinks.vue'
-import CustomerLogos from '../components/CustomerLogos.vue'
 import PageHeader from '../components/PageHeader.vue'
 import PageFooter from '../components/PageFooter.vue'
 
@@ -183,7 +200,6 @@ export default {
 
   components: {
     SocialMediaLinks,
-    CustomerLogos,
     PageHeader,
     PageFooter,
   },
