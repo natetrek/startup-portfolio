@@ -32,9 +32,9 @@
 
     <!-- Flex.io summary -->
     <div id="flexio" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone-100">
-      <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
+      <div class="basis-1/3 flex justify-center items-center pb-6 md:pb-0">
         <a href="https://flexio.natewilliams.dev/" target="_blank">
-          <img  src="../assets/flexio-logo.png" alt="Flex.io logo">
+          <img src="../assets/flexio-logo.png" alt="Flex.io logo" class="w-4/5 md:w-full mx-auto">
         </a>
       </div>
       <div class="basis-2/3">
@@ -47,7 +47,7 @@
     </div>
 
     <!-- Flex.io details -->
-    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
+    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-12">
       <div v-if="!isMobile" class="basis-1/2 space-y-6 text-center mx-4">
         <a href="https://flexio.natewilliams.dev/" target="_blank">
           <img  src="../assets/flexio-work-01.png" alt="Flex.io website (archive)" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
@@ -58,7 +58,7 @@
         </a>
         <div class="text-sm">Product demo video</div>
       </div>
-      <div class="basis-1/2 mx-2">
+      <div class="basis-1/2 mx-2 pb-8">
         <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Flex.io</div>
           <div>Flex.io was a cloud service for integrating data from Web apps directly into Microsoft Excel and Google Sheets. It gave spreadsheet users a way to get live, refreshable data from the cloud without having to write code or go through an IT project.</div>
@@ -73,13 +73,24 @@
           </ul>
         </div>
       </div>
+      <!-- Display images at bottom on mobile -->
+      <div v-if="isMobile" class="basis-1/2 space-y-6 text-center mx-4">
+        <a href="https://flexio.natewilliams.dev/" target="_blank">
+          <img  src="../assets/flexio-work-01.png" alt="Flex.io website (archive)" class="w-5/6 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+        </a>
+        <div class="text-sm pb-10">Flex.io website (archive)</div>
+        <a href="https://youtu.be/y9PYtsVnpHk" target="_blank">
+          <img  src="../assets/flexio-work-02.png" alt="Flex.io product demo video" class="w-5/6 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+        </a>
+        <div class="text-sm pb-10">Product demo video</div>
+      </div>
     </div>
 
     <!-- Gold Prairie summary -->
     <div id="goldprairie" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone-100">
-      <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
+      <div class="basis-1/3 flex justify-center items-center pb-6 md:pb-0">
         <a href="https://goldprairie.natewilliams.dev/" target="_blank">
-          <img  src="../assets/gp-logo.png" alt="Gold Prairie logo" class="w-3/4 mx-auto">
+          <img  src="../assets/gp-logo.png" alt="Gold Prairie logo" class="w-3/5 md:w-3/4 mx-auto">
         </a>
       </div>
       <div class="basis-2/3">
@@ -92,7 +103,7 @@
     </div>
 
     <!-- Gold Prairie details -->
-    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
+    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-12">
       <div v-if="!isMobile" class="basis-1/2 space-y-6 text-center mx-4">
         <a href="https://goldprairie.natewilliams.dev/" target="_blank">
           <img  src="../assets/gp-work-01.png" alt="Gold Prairie home page (archive)" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
@@ -103,7 +114,7 @@
         </a>
         <div class="text-sm pb-12">Company profile on Crunchbase</div>
       </div>
-      <div class="basis-1/2 mx-2">
+      <div class="basis-1/2 mx-2 pb-8">
         <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Gold Prairie</div>
           <div>Gold Prairie was a <a href="https://www.investopedia.com/terms/f/fintech.asp" target="_blank">Fintech solution</a> for identifying and preventing payment errors, such as duplicate payments and missed discounts. It operated as an automated, internal financial control for accounting staff at large organizations.</div>
@@ -123,14 +134,25 @@
           </ul>
         </div>
       </div>
+      <!-- Display images at bottom on mobile -->
+      <div v-if="isMobile" class="basis-1/2 space-y-6 text-center mx-4">
+        <a href="https://goldprairie.natewilliams.dev/" target="_blank">
+          <img  src="../assets/gp-work-01.png" alt="Gold Prairie home page (archive)" class="w-5/6 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+        </a>
+        <div class="text-sm pb-10">Gold Prairie home page (archive)</div>
+        <a href="https://www.crunchbase.com/organization/gold-prairie" target="_blank">
+          <img  src="../assets/gp-work-02.png" alt="Gold Prairie company profile on Crunchbase" class="w-5/6 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+        </a>
+        <div class="text-sm pb-10">Company profile on Crunchbase</div>
+      </div>
     </div>
 
 
     <!-- Kirix summary -->
     <div id="kirix" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone-100">
-      <div v-if="!isMobile" class="basis-1/3 flex justify-center items-center">
+      <div class="basis-1/3 flex justify-center items-center pb-6 md:pb-0">
         <a href="https://www.kirix.com/" target="_blank">
-          <img  src="../assets/kirix-logo.png" alt="Kirix logo" class="w-3/5 mx-auto">
+          <img  src="../assets/kirix-logo.png" alt="Kirix logo" class="w-3/5 md:w-3/4 mx-auto">
         </a>
       </div>
       <div class="basis-2/3">
@@ -143,14 +165,14 @@
     </div>
 
     <!-- Kirix details -->
-    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
+    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-12">
       <div v-if="!isMobile" class="basis-1/2 space-y-6 text-center mx-4">
         <a href="https://youtu.be/3pA-W63oJYU" target="_blank">
           <img  src="../assets/kirix-work-01.png" alt="Kirix product demo video" class="w-4/5 mx-auto border border-gray-300 shadow-lg hover:scale-105">
         </a>
         <div class="text-sm pb-8">Product demo video</div>
       </div>
-      <div class="basis-1/2 mx-2">
+      <div class="basis-1/2 mx-2 pb-8">
         <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Kirix</div>
           <div>Kirix was an <a href="https://en.wikipedia.org/wiki/Kirix_Strata" target="_blank">award-winning productivity tool</a> for transforming, cleaning, and analyzing data. It also incorporated a built-in web browser for opening and working with CSV files on the web.</div>
@@ -167,6 +189,13 @@
             <li>Delivering a unique, innovative data analytic feature set, including dynamic calculations across 100+ million records, linking data sets, and browsing Web-based data</li>
           </ul>
         </div>
+      </div>
+      <!-- Display images at bottom on mobile -->
+      <div v-if="isMobile" class="basis-1/2 space-y-6 text-center mx-4">
+        <a href="https://youtu.be/3pA-W63oJYU" target="_blank">
+          <img  src="../assets/kirix-work-01.png" alt="Kirix product demo video" class="w-5/6 mx-auto border border-gray-300 shadow-lg hover:scale-105">
+        </a>
+        <div class="text-sm pb-10">Product demo video</div>
       </div>
     </div>
 
