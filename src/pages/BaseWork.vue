@@ -21,12 +21,12 @@
         <div class="prose max-w-none space-y-4 pt-4">
           <div>Welcome to a brief tour of my startup experience.</div>
           <div>
-            I led product development, built nifty new things, and kept customers happy at three enterprise software startups over 15+ years:
+            I led product development, built nifty new things, and kept customers happy at three enterprise software startups:
             <router-link to="/work#flexio">Flex.io</router-link>,
             <router-link to="/work#goldprairie">Gold Prairie</router-link>, and
             <router-link to="/work#kirix">Kirix</router-link>.
           </div>
-          <div>Some say building a startup is like trying to assemble an airplane while you're flying it, but I think it's more like shooting the rapids on a surfboard. Here are some things I learned along the way.</div>
+          <div>Some say building a startup is like trying to assemble an airplane while you're flying it, but I think it's more like shooting the rapids on a surfboard. Here are some highlights from this journey.</div>
         </div>
     </div>
 
@@ -110,7 +110,7 @@
           <div>I led product development and managed all aspects of the product lifecycle from initial market validation to delivering the solution and building customer relationships.</div>
           <div>After 10+ years of growing the company, including raising a small investment round, we successfully exited via a private sale in 2019.</div>
           <div class="font-bold pt-4">Highlights</div>
-          <div>Gold Prairie delivered great results and this led to many long-term relationships with customers (5+ years). Some things I'm proud of include:</div>
+          <div>Gold Prairie delivered great results and this led to many long-term relationships with customers (5+ years). Some other things I'm proud of include:</div>
           <ul class="space-y-4 pl-8">
             <li>Deploying the solution at 30+ enterprise customers, including
               <a href="https://www.astellas.com/en/" target="_blank">Astellas Pharma</a>,
@@ -153,11 +153,10 @@
       <div class="basis-1/2 mx-2">
         <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Kirix</div>
-          <div>Kirix Strata was an <a href="https://en.wikipedia.org/wiki/Kirix_Strata" target="_blank">award-winning productivity tool</a> for transforming, cleaning, and analyzing data. It also incorporated a built-in web browser for opening and working with CSV files on the web.</div>
-          <div>I managed product strategy and led product development through all stages, from prototyping and testing to customer acquisition, onboarding and support.</div>
+          <div>Kirix was an <a href="https://en.wikipedia.org/wiki/Kirix_Strata" target="_blank">award-winning productivity tool</a> for transforming, cleaning, and analyzing data. It also incorporated a built-in web browser for opening and working with CSV files on the web.</div>
+          <div>Kirix was a team effort, built by a small group of founders. I focused primarily on product strategy, product development, and sales and marketing.</div>
           <div class="font-bold pt-4">Highlights</div>
-          <div>Kirix Strata impressed a lot of people and garnered media attention, but in many respects it was ahead of its time. We were pioneering data preparation on large data sets before “Big Data” was a thing.</div>
-          <div>Here are some highlights from this journey:</div>
+          <div>Kirix garnered media attention and impressed a lot of people, but in many ways it was ahead of its time. We were pioneering data preparation before that became its own product category. Some highlights include:</div>
           <ul class="space-y-4 pl-8">
             <li><a href="https://www.idg.co.uk/news/winners-of-product-excellence-awards-announced-at-linuxworld-conference-idg-world-expo-and-linuxworld-magazine-reward-product-and-service-innovation/" target="_blank">Winning the Product Excellence Award</a> at LinuxWorld Boston 2005 for the “Best Desktop-Productivity-Business Application,” beating Sun Microsystems’s StarOffice</li>
             <li>Generating media coverage from
