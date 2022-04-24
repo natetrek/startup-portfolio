@@ -16,31 +16,42 @@
       </div>
     </div>
 
-    <!-- Building great products -->
-    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-16 border-t border-gray-300">
-        <div class="space-y-8 pt-4 md:pt-8">
-          <div class="text-2xl md:text-3xl text-center">Building Great Products</div>
-          <div class="leading-7">A big reason love building great products are the amazing people I've had the privilidge to work with.</div>
-          <div class="leading-7">I've had the unforgetable experience of building several pioneering products in collaboration with a great group of highly skilled, unrelenting developers and a community of fantastic customers. We laughed, we cried, and we shipped, and shipped again, pushing the boundaries of tech in the process.</div>
-          <div class="leading-7">Here are some startups I created: <router-link to="/work#flexio">Flex.io</router-link>, <router-link to="/work#goldprairie">Gold Prairie</router-link>, <router-link to="/work#kirix">Kirix</router-link>.</div>
+    <!-- Intro -->
+    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
+        <div class="prose max-w-none space-y-4 my-4">
+          <div>Hi, I'm Nate. Thanks for stopping by. I'm a web software entrepreneur, developer and UI/UX designer.</div>
+          <div>I co-founded three enterprise software startups where I led product development and managed all aspects of the product lifecycle. In different ways, all three ventures focused on data preparation, data analysis and creating value with data resources:</div>
+          <ul class="space-y-2 pl-8 md:pl-16">
+            <li><router-link to="/work#flexio">Flex.io</router-link> imported data from web apps into spreadsheets simply by typing a formula</li>
+            <li><router-link to="/work#goldprairie">Gold Prairie</router-link> pinpointed payment errors by analyzing large volumes of corporate financial data</li>
+            <li><router-link to="/work#kirix">Kirix</router-link> was a productivity application for data preparation and ad hoc data analysis</li>
+          </ul>
         </div>
     </div>
 
     <!-- Design & Development -->
-    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-8 md:py-16 border-t border-gray-300">
-        <div class="space-y-8 md:space-y-12">
-          <div class="text-2xl md:text-3xl text-center">Design & Development</div>
-          <div class="leading-7">I love web design and writing code, both professionally and for personal projects. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat velit corporis, et vel excepturi deserunt aspernatur architecto veritatis, eaque voluptas, ea ullam qui autem? Possimus perspiciatis nam itaque delectus tempore?</div>
+    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12 border-t border-gray-300">
+        <div class="prose max-w-none space-y-4 my-4">
+          <div class="text-2xl md:text-3xl text-center pb-4">Design & development</div>
+          <div>I love web design and writing code, both professionally and for personal projects. I believe good design and good code go hand-in-hand. Development realities set the boundaries for the design. Likewise, crafting a thoughtful design often uncovers key issues that can save weeks or months of development time.</div>
+        </div>
+    </div>
+
+    <!-- About this site -->
+    <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12 border-t border-gray-300">
+        <div class="prose max-w-none space-y-4 my-4">
+          <div class="text-2xl md:text-3xl text-center pb-4">About this site</div>
+          <div>I love web design and writing code, both professionally and for personal projects. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat velit corporis, et vel excepturi deserunt aspernatur architecto veritatis, eaque voluptas, ea ullam qui autem? Possimus perspiciatis nam itaque delectus tempore?</div>
         </div>
     </div>
 
     <!-- Technologies, frameworks & tools -->
-    <div class="container-inner mx-2 sm:mx-auto py-8 md:py-16 border-t border-gray-300">
-      <div class="text-2xl md:text-3xl text-center pb-12">Tools, Technologies & Frameworks</div>
+    <div class="container-inner mx-2 sm:mx-auto py-16 border-t border-gray-300">
+      <div class="text-2xl md:text-3xl text-center pb-8 md:pb-12">Technologies, tools & frameworks</div>
       <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-auto gap-8">
           <div class="flex flex-col items-center" v-for="item in technologies" :key="item.id">
               <img class="w-48 h-48" :src="getImgUrl(item.img)" :alt="item.name">
-              <div class="prose prose-sm flex justify-center pt-4">{{ item.name }} </div>
+              <div class="prose prose-sm flex justify-center md:pt-4">{{ item.name }} </div>
           </div>
       </div>
     </div>
