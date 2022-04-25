@@ -69,8 +69,8 @@
         </button>
       </div>
       <div class="prose max-w-none flex-auto sm:w-2/3 sm:pl-8">
-        <h2>Kirix Research</h2>
-        <p>Kirix Strata was an award-winning productivity tool for data preparation and ad hoc data analysis. It also incorporated a built-in web browser for working with data from the cloud.</p>
+        <h2>Kirix</h2>
+        <p>Kirix was an award-winning productivity tool for data preparation and ad hoc data analysis. It also incorporated a built-in web browser for working with data from the cloud.</p>
         <p>Product development was a team effort. I focused primarily on product strategy as well as sales and marketing.</p>
         <p>Some highlights include:</p>
         <ul>
