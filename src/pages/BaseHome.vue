@@ -12,36 +12,30 @@
     </div> <!-- end hero -->
 
     <div class="container-inner">
-      <p class="prose prose-lg sm:prose-xl  max-w-none">Thanks for stopping by. I'm a web software entrepreneur who loves amazing tech, good design and
-        backcountry treks. Formerly, I helped build <a href="https://flexio.natewilliams.dev/" target="_blank">Flex.io</a> and
-        <a href="https://goldprairie.natewilliams.dev/" target="_blank">Gold Prairie</a>, where I was Co-founder & CEO. I'm passionate about community, conservation and code.
+      <p class="prose prose-lg sm:prose-xl  max-w-none">I'm a web software entrepreneur who loves amazing technology, good design and
+        backcountry treks. Formerly, I helped build three startups where I was Co-founder & CEO: <a href="https://flexio.natewilliams.dev/" target="_blank">Flex.io</a>,
+        <a href="https://goldprairie.natewilliams.dev/" target="_blank">Gold Prairie</a>, and <a href="https://www.kirix.com/" target="_blank">Kirix</a>. I'm passionate about community, conservation and code.
       </p>
     </div>
 
     <div class="container-inner text-xl py-12 mb-16">
       <h2 class="font-bold mb-6">Work Highlights</h2>
-
       <ul class="text-lg sm:text-xl space-y-6">
         <li class="checkmark">
-          <div>Highlight One</div>
-          <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+          <div>Entrepreneurship</div>
+          <div class="text-lg text-gray-600 pt-4">Brought one company full cycle from market validation and product development to building a customer base and a successful exit</div>
         </li>
         <li class="checkmark">
-          <div>Highlight Two</div>
-          <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+          <div>Product Management</div>
+          <div class="text-lg text-gray-600 pt-4">Led product development teams and managed the product lifecycle for three software startups</div>
         </li>
         <li class="checkmark">
-          <div>Highlight Three</div>
-          <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
-        </li>
-        <li class="checkmark">
-          <div>Highlight Four</div>
-          <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+          <div>Design & Development</div>
+          <div class="text-lg text-gray-600 pt-4">Designed the user interface and user experience (UI/UX) for multiple software products</div>
         </li>
       </ul>
-    </div> <!-- end projects -->
+    </div>
   </div>
-
 </template>
 
 <script>

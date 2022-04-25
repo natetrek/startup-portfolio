@@ -4,11 +4,22 @@
     <div class="container-inner flex flex-col sm:flex-row justify-left py-10">
       <div class="w-full sm:w-3/5 text-center sm:text-left self-center space-y-8 sm:pr-8">
         <div class="text-3xl sm:text-4xl font-bold">About Me</div>
-        <div class="text-2xl font-bold text-blue leading-10">Highlights from the enterprise software startups I helped build</div>
+        <div class="text-2xl font-bold text-blue leading-10">A little bit about me and the tools and technologies I like to use</div>
       </div>
       <div class="mt-8 sm:mt-0">
         <img src="../assets/coder-at-desk.svg" width="275" alt="trekking in the mountains" class="mx-auto sm:mx-0">
       </div>
+    </div>
+
+    <!-- Intro -->
+    <div class="container-inner prose max-w-none mx-auto mt-6 py-10 border-y border-gray-300">
+      <p>Hi, I'm Nate. Thanks for stopping by. I'm a web software entrepreneur, developer and designer.</p>
+      <p>I co-founded three enterprise software startups where I led product development. In different ways, all three ventures focused on data preparation and data analysis:</p>
+      <ul class="pl-12">
+        <li><router-link to="/startups#flexio">Flex.io</router-link> was a #NoCode platform for importing data from the cloud into spreadsheets</li>
+        <li><router-link to="/startups#goldprairie">Gold Prairie</router-link> was a SaaS solution for identifying and recovering payment errors</li>
+        <li><router-link to="/startups#kirix">Kirix</router-link> was a productivity application for data preparation and ad hoc data analysis</li>
+      </ul>
     </div>
 
     <!-- Technologies, frameworks & tools -->

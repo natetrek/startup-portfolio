@@ -14,7 +14,11 @@
     <!-- Intro -->
     <div class="container-inner prose max-w-none mx-auto mt-6 py-10 border-y border-gray-300">
       <p>Welcome to a tour of my startup experience.</p>
-      <p>I led product development, helped create new technology, and managed customer relationships at three enterprise software startups: Flex.io, Gold Prairie, and Kirix. Here are some highlights from this journey.</p>
+      <p>I led product development, helped create new technology, and managed customer relationships at three enterprise software startups:
+        <router-link to="/startups#flexio">Flex.io</router-link>,
+        <router-link to="/startups#goldprairie">Gold Prairie</router-link>, and
+        <router-link to="/startups#kirix">Kirix</router-link>.
+        Here are some highlights from this journey.</p>
     </div>
 
     <!-- Flex.io highlights -->
@@ -26,7 +30,7 @@
       </div>
       <div class="prose max-w-none flex-auto sm:w-2/3 sm:pl-8">
         <h2>Flex.io</h2>
-        <p>Flex.io was a cloud service for integrating data from Web apps directly into Microsoft Excel and Google Sheets. It gave spreadsheet users a way to get live, refreshable data from the cloud without having to write code or go through an IT project.</p>
+        <p>Flex.io was a cloud service for integrating data from Web apps directly into Microsoft Excel and Google Sheets. It gave spreadsheet users a way to get live data from the cloud without having to write any code.</p>
         <p>I led the product development team, focusing on product-market fit.</p>
         <p>Some highlights from building Flex.io include:</p>
         <ul>
