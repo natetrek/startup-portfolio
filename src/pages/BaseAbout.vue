@@ -22,7 +22,7 @@
           <div>Hi, I'm Nate. Thanks for stopping by. I'm a web software entrepreneur, developer and UI/UX designer.</div>
           <div>I co-founded three enterprise software startups where I led product development and managed all aspects of the product lifecycle. In different ways, all three ventures focused on data preparation, data analysis and creating value with data resources:</div>
           <ul class="space-y-2 pl-8 md:pl-16">
-            <li><router-link to="/work#flexio">Flex.io</router-link> imported data from web apps into spreadsheets simply by typing a formula</li>
+            <li><router-link to="/work#flexio">Flex.io</router-link> was about getting data from the cloud into spreadsheets simply by typing a formula</li>
             <li><router-link to="/work#goldprairie">Gold Prairie</router-link> pinpointed payment errors by analyzing large volumes of corporate financial data</li>
             <li><router-link to="/work#kirix">Kirix</router-link> was a productivity application for data preparation and ad hoc data analysis</li>
           </ul>
@@ -33,7 +33,7 @@
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12 border-t border-gray-300">
         <div class="prose max-w-none space-y-4 my-4">
           <div class="text-2xl md:text-3xl text-center pb-4">Design & development</div>
-          <div>I love web design and writing code, both professionally and for personal projects. I believe good design and good code go hand-in-hand. Development realities set the boundaries for the design. Likewise, crafting a thoughtful design often uncovers key issues that can save weeks or months of development time.</div>
+          <div>I love web design and writing code, both professionally and for personal projects. I believe good UI/UX design and good code go hand-in-hand. Crafting <a href="https://uxmastery.com/" target="_blank">thoughtful designs</a> up front often uncovers key issues that can save weeks of development time. In turn, <a href="https://www.refactoringui.com/" target="_blank">well-crafted code</a> creates elegant interfaces.</div>
         </div>
     </div>
 
@@ -41,7 +41,15 @@
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12 border-t border-gray-300">
         <div class="prose max-w-none space-y-4 my-4">
           <div class="text-2xl md:text-3xl text-center pb-4">About this site</div>
-          <div>I love web design and writing code, both professionally and for personal projects. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat velit corporis, et vel excepturi deserunt aspernatur architecto veritatis, eaque voluptas, ea ullam qui autem? Possimus perspiciatis nam itaque delectus tempore?</div>
+            <div>
+               I'm a big fan of the <a href="https://jamstack.org/" target="_blank">Jamstack</a>, particularly for getting a new projects off the ground quickly. I built this site using
+               <a href="https://vitejs.dev/" target="_blank">Vite</a>,
+               <a href="https://vuejs.org/" target="_blank">Vue 3</a>, and
+               <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>. I used
+               <a href="https://www.figma.com/" target="_blank">Figma</a> and
+               <a href="https://affinity.serif.com/en-us/" target="_blank">Affinity Designer</a> for the design.
+               Below are some other technologies and tools I like to use.
+            </div>
         </div>
     </div>
 
@@ -77,7 +85,6 @@
 
 <script>
 import SocialMediaLinks from '../components/SocialMediaLinks.vue'
-import CustomerLogos from '../components/CustomerLogos.vue'
 import PageHeader from '../components/PageHeader.vue'
 import PageFooter from '../components/PageFooter.vue'
 import json from '../store/about-technologies-data.json'
@@ -87,7 +94,6 @@ export default {
 
   components: {
     SocialMediaLinks,
-    CustomerLogos,
     PageHeader,
     PageFooter,
   },

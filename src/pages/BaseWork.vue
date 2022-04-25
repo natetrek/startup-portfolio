@@ -31,7 +31,8 @@
     </div>
 
     <!-- Flex.io summary -->
-    <div id="flexio" class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone-100">
+    <div id="flexio"></div>
+    <div class="container-inner flex flex-col md:flex-row mx-auto py-8 bg-stone-100">
       <div class="basis-1/3 flex justify-center items-center pb-6 md:pb-0">
         <a href="https://flexio.natewilliams.dev/" target="_blank">
           <img src="../assets/flexio-logo.png" alt="Flex.io logo" class="w-4/5 md:w-full mx-auto">
@@ -240,6 +241,10 @@ export default {
   },
 
   methods : {
+      // open a mail client to handle sending an email
+      btnSendEmail: function() {
+          window.open("mailto:nate@natewilliams.dev");
+      },
       // update variable used to select mobile display elements
       handleResize() {
         this.isMobile = (window.innerWidth < 725 || window.innerHeight < 650 || (window.innerWidth < 920 && window.innerHeight < 720) );
