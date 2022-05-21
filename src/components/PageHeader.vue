@@ -15,7 +15,7 @@
       </button>
     </div>
     <!-- right nav open -->
-    <div class="nav-btn-container w-full h-screen w-52 lg:w-60 py-8"
+    <div class="nav-btn-container h-screen w-52 lg:w-60 py-8"
         :class="(isOpen ? 'absolute right-0 top-0': 'hidden'), (isMobile ? 'bg-gray-800/70': 'bg-gray-800/60')"
     >
       <!-- close (x) -->
