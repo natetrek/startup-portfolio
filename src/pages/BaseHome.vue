@@ -14,9 +14,8 @@
               <p>Designer</p>
             </div>
             <div class="prose pb-10">
-                Web software entrepreneur who loves <a href="https://vitejs.dev/" target="_blank">amazing tech</a>,
-                <a href="https://davidwallacehaskins.com/" target="_blank">large-scale art</a>
-                and backcountry treks. Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
+                Web software entrepreneur who loves innovative tech, large-scale art and backcountry treks.
+                Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
                 and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation, and code.
             </div>
             <SocialMediaLinks :isHome="true" class="pb-12" />

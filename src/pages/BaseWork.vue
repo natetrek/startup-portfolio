@@ -130,7 +130,7 @@
               <a href="https://www.condenast.com/" target="_blank">Condé Nast</a>,
               <a href="https://www.jcpenney.com/" target="_blank">JC Penney</a>, and
              <a href="https://www.medline.com/" target="_blank">Medline Industries</a></li>
-            <li>Cutting the timeframe for recovering funds from 1-2 years average to less than a month</li>
+            <li>Cutting the timeframe for recovering funds from 1-2 years to less than a month</li>
             <li>Generating an average of $2 million annual savings per customer</li>
           </ul>
         </div>
@@ -177,7 +177,7 @@
         <div class="prose max-w-none space-y-4">
           <div class="font-bold">What I did at Kirix</div>
           <div>Kirix was an <a href="https://en.wikipedia.org/wiki/Kirix_Strata" target="_blank">award-winning productivity tool</a> for transforming, cleaning, and analyzing data. It also incorporated a built-in web browser for opening and working with CSV files on the web.</div>
-          <div>Kirix was a team effort by a small group of founders. I focused primarily on product strategy, product development, and sales and marketing.</div>
+          <div>Kirix was a team effort by a small group of founders. I focused primarily on product strategy, product development, and marketing.</div>
           <div class="font-bold pt-4">Highlights</div>
           <div>Kirix garnered media attention and impressed a lot of people, but in many ways it was ahead of its time. We were pioneering data preparation before that became its own product category. Some highlights include:</div>
           <ul class="space-y-4 pl-8">
