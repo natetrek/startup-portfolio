@@ -1,6 +1,6 @@
 <template>
   <!-- Non-mobile display -->
-  <div v-if="!isMobile" id="carousel-container" class="relative flex justify-center items-center h-screen">
+  <div v-if="!isMobile" id="carousel-container" class="carousel-image-container relative flex justify-center items-center h-screen">
     <div class="absolute">
       <!-- Carousel image -->
       <div><a :href="content[contentIdx].link" target="_blank"><img id="carousel-img-id" class="carousel-img shadow-xl" :width="imgWidth" :src="getImgUrl(imgIndex)" :alt="content[contentIdx].alt"></a></div>
@@ -9,6 +9,17 @@
           <div class="carousel-text">{{ content[contentIdx].headings[0] }}</div>
           <div class="carousel-text">{{ content[contentIdx].headings[1] }}</div>
       </div>
+    </div>
+    <!-- Carousel prev & next buttons-->
+    <div id="carousel-nav-btns" class="absolute left-0 top-1/2 transform -translate-y-1/2"> <!-- Prev button-->
+      <button @click="btnPrev()" class="carousel-nav">
+        <svg class="fill-white h-16 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
+    </div>
+    <div id="carousel-nav-btns" @click="btnNext()" class="absolute right-0 top-1/2 transform -translate-y-1/2"> <!-- Next button-->
+      <button class="carousel-nav">
+        <svg class="fill-white h-16 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
     </div>
     <!-- Carousel image selectors-->
     <div id="carousel-selectors" class="absolute flex bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
@@ -91,6 +102,20 @@ export default {
           this.refreshCarousel()
         },
 
+        // update the carousel image when user clicks the previous nav button
+        btnPrev() {
+        this.imgIndex = this.imgIndex <= 1 ? 4 : this.imgIndex - 1
+        this.contentIdx = (this.imgIndex-1)
+        this.refreshCarousel()
+        },
+
+        // update the carousel image when user clicks the next nav button
+        btnNext() {
+        this.imgIndex = this.imgIndex >= 4 ? 1 : this.imgIndex + 1
+        this.contentIdx = (this.imgIndex-1)
+        this.refreshCarousel()
+        },
+
         // update the source & width of the carousel image based on image selected & screen size
         // carousel container is not displayed on mobile screens
         refreshCarousel() {
@@ -145,6 +170,15 @@ export default {
 
 <style scoped>
 
+  .carousel-image-container:hover #carousel-nav-btns {
+      display: flex;
+  }
+
+  /* only show the carousel buttons on hover */
+  .carousel-image-container #carousel-nav-btns {
+    display: none;
+  }
+
   .carousel-img:hover {
     transform: scale(1.01);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -156,6 +190,15 @@ export default {
     letter-spacing: 0.05em;
     padding-bottom: 8px;
     color: theme('colors.white');
+  }
+
+  /* styling for previous and next buttons in the hero image */
+  .carousel-nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+  .carousel-nav:hover {
+    opacity: 0.5;
   }
 
   @media (min-width: 1024px) {
