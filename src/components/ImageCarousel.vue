@@ -58,6 +58,7 @@ export default {
           imgIndex: 1,
           imgWidth: 300,
           carouselKey: 0,
+          rotateImg: null,
         };
     },
 
@@ -107,14 +108,17 @@ export default {
 
         rotateCarousel: function () {
           var carousel = this;
-          setInterval(function () {
+          const rotateImg = setInterval(function () {
             if (!this.isMobile) {
               carousel.imgIndex = (carousel.imgIndex < 4) ? carousel.imgIndex+1 : 1
               carousel.contentIdx = carousel.imgIndex - 1
               carousel.refreshCarousel()
             }
-          }, 20000);
+          }, 15000);
+          this.rotateImg = rotateImg
         }
+
+
     },
 
     created() {
@@ -128,8 +132,13 @@ export default {
 
     mounted () {
       this.refreshCarousel()
-//      this.rotateCarousel()
+      this.rotateCarousel()
+    },
+
+    unmounted () {
+        clearInterval(this.rotateImg)
     }
+
 }
 </script>
 

@@ -1,4 +1,5 @@
 <template>
+  <!-- Mobile nav -->
   <div v-if="isMobile" class="top-0 left-0 z-40 fixed w-full bg-white">
     <!-- include logo on top nav for all mobile screen pages -->
     <div class="container-inner flex flex-wrap justify-between items-center mx-auto py-8">
@@ -31,6 +32,7 @@
       </ul>
     </div>
   </div>
+  <!-- non-Mobile nav -->
   <div v-else class="top-0 left-0 z-40 fixed w-full" :class="isBlue ? 'bg-black/40': 'bg-transparent'">
     <div>
       <ul class="flex justify-end pr-6">
