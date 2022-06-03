@@ -4,7 +4,7 @@
     <PageHeader :isMobile="isMobile" :isBlue="isBlue" />
 
     <!-- Hero area -->
-    <div id="hero" class="flex items-center text-white bg-[#6facf2] w-full lg:h-96" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
+    <div id="hero" class="flex items-center text-white bg-[#6facf2] w-full md:h-[450px]" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
       <div class="container-inner flex flex-col sm:flex-row justify-left items-center py-8 mx-auto">
         <div class="w-full sm:w-3/5 text-center sm:text-left self-center space-y-8 sm:pr-8">
           <div class="text-3xl lg:text-4xl font-bold uppercase">Work</div>

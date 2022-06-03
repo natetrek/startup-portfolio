@@ -77,8 +77,8 @@ export default {
           let calcWidth = 300
           if (curWidth >  600 && curHeight >  700) calcWidth = 400
           if (curWidth >  800 && curHeight >  800) calcWidth = 500
-          if (curWidth > 1000 && curHeight >  900) calcWidth = 600
-          if (curWidth > 1200 && curHeight > 1000) calcWidth = 700
+          if (curWidth > 1100 && curHeight > 1000) calcWidth = 600
+          if (curWidth > 1200 && curHeight > 1100) calcWidth = 700
           if (curWidth > 1400 && curHeight > 1200) calcWidth = 800
           return calcWidth
         },

@@ -1,8 +1,8 @@
 <template>
-  <div class="top-0 left-0 z-40 fixed w-full" :class="isMobile ? 'bg-white': 'bg-transparent'">
-    <!-- right nav closed -->
+  <div v-if="isMobile" class="top-0 left-0 z-40 fixed w-full bg-white">
+    <!-- include logo on top nav for all mobile screen pages -->
     <div class="container-inner flex flex-wrap justify-between items-center mx-auto py-8">
-      <div v-if="isMobile"><!-- include logo on top nav for all mobile screen pages -->
+      <div >
         <router-link to="/" @click.native="scrollToTop">
           <img src="../assets/nate-williams-logo-180.svg" alt="nate-williams-logo" width="180" />
         </router-link>
@@ -11,12 +11,12 @@
     <!-- burger -->
     <div :class="!isOpen ? 'absolute right-0 top-0 p-8': 'hidden'">
       <button @click="toggleBurger" class="flex items-center">
-        <svg class="h-6 w-6" :class="(isMobile || isBlue) ? 'fill-heroblue': 'fill-white'" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+        <svg class="h-6 w-6 fill-heroblue" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
       </button>
     </div>
     <!-- right nav open -->
-    <div class="nav-btn-container h-screen w-52 lg:w-60 py-8"
-        :class="(isOpen ? 'absolute right-0 top-0': 'hidden'), (isMobile ? 'bg-gray-800/70': 'bg-gray-800/60')"
+    <div class="nav-btn-container h-screen w-52 lg:w-60 py-8 bg-gray-800/70"
+        :class="isOpen ? 'absolute right-0 top-0': 'hidden'"
     >
       <!-- close (x) -->
       <div class="flex justify-end lg:pb-2 pr-7">
@@ -25,9 +25,18 @@
         </button>
       </div>
       <ul>
-        <li><router-link to="/" @click="scrollToTop"><div class="nav-btn pl-6 py-3 lg:py-4">Home</div></router-link></li>
-        <li><router-link to="/work" @click="scrollToTop"><div class="nav-btn pl-6 py-3 lg:py-4">Work</div></router-link></li>
-        <li><router-link to="/about" @click="scrollToTop"><div class="nav-btn pl-6 py-3 lg:py-4">About</div></router-link></li>
+        <li><router-link to="/" @click="scrollToTop"><div class="nav-btn text-2xl pl-6 py-3 lg:py-4">Home</div></router-link></li>
+        <li><router-link to="/work" @click="scrollToTop"><div class="nav-btn text-2xl pl-6 py-3 lg:py-4">Work</div></router-link></li>
+        <li><router-link to="/about" @click="scrollToTop"><div class="nav-btn text-2xl pl-6 py-3 lg:py-4">About</div></router-link></li>
+      </ul>
+    </div>
+  </div>
+  <div v-else class="top-0 left-0 z-40 fixed w-full" :class="isBlue ? 'bg-black/40': 'bg-transparent'">
+    <div>
+      <ul class="flex justify-end pr-6">
+        <li><router-link to="/" @click="scrollToTop"><div class="nav-btn text-lg px-4 py-6">Home</div></router-link></li>
+        <li><router-link to="/work" @click="scrollToTop"><div class="nav-btn text-lg px-4 py-6">Work</div></router-link></li>
+        <li><router-link to="/about" @click="scrollToTop"><div class="nav-btn text-lg px-4 py-6">About</div></router-link></li>
       </ul>
     </div>
   </div>
@@ -73,7 +82,6 @@
 
 <style scoped>
 .nav-btn {
-  font-size: 1.4em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.025em;

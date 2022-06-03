@@ -34,9 +34,8 @@
   <div v-else>
     <PageHeader :isMobile="isMobile" :isBlue=false />
     <div class="container-inner mx-auto py-8">
-      <div class="pb-12"><img src="../assets/nate-williams-logo-180.svg" alt="nate-williams-logo" width="180" /></div>
       <div>
-        <div class="text-3xl sm:text-4xl font-bold uppercase text-textblue space-y-4 pb-10">
+        <div class="text-3xl sm:text-4xl font-bold uppercase text-textblue space-y-4 pt-20 pb-10">
           <p>Startup founder</p>
           <p>Developer &</p>
           <p>Designer</p>
@@ -66,7 +65,7 @@ import SocialMediaLinks from '../components/SocialMediaLinks.vue'
 import ImageCarousel from '../components/ImageCarousel.vue'
 import PageHeader from '../components/PageHeader.vue'
 import PageFooter from '../components/PageFooter.vue'
-import json from '../store/home-carousel-data.json'
+import json from '../data/home-carousel-data.json'
 
 export default {
   name: "BaseHome",

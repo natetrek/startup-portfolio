@@ -4,7 +4,7 @@
     <PageHeader :isMobile="isMobile" :isBlue="isBlue" />
 
     <!-- Hero area -->
-    <div id="hero" class="flex items-center text-white bg-heroblue lg:h-96 w-full" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
+    <div id="hero" class="flex items-center text-white bg-heroblue md:h-[450px] w-full" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
       <div class="container-inner flex flex-col sm:flex-row justify-left items-center py-8 mx-auto">
         <div class="w-full sm:w-3/5 text-center sm:text-left self-center space-y-8 sm:pr-8">
           <div class="text-3xl xl:text-4xl font-bold uppercase">About me</div>
@@ -87,7 +87,7 @@
 import SocialMediaLinks from '../components/SocialMediaLinks.vue'
 import PageHeader from '../components/PageHeader.vue'
 import PageFooter from '../components/PageFooter.vue'
-import json from '../store/about-technologies-data.json'
+import json from '../data/about-technologies-data.json'
 
 export default {
   name: "BaseAbout",
