@@ -139,10 +139,9 @@ export default {
               carousel.contentIdx = carousel.imgIndex - 1
               carousel.refreshCarousel()
             }
-          }, 15000);
+          }, 20000);
           this.rotateImg = rotateImg
         }
-
 
     },
 
