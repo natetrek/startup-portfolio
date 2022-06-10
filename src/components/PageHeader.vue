@@ -33,7 +33,7 @@
     </div>
   </div>
   <!-- non-Mobile nav -->
-  <div v-else class="top-0 left-0 z-40 fixed w-full" :class="isBlue ? 'bg-black/40': 'bg-transparent'">
+  <div v-else class="top-0 left-0 z-40 fixed w-full" :class="isBelowHero ? 'bg-black/40': 'bg-transparent'">
     <div>
       <ul class="flex justify-end pr-6">
         <li><router-link to="/" @click="scrollToTop"><div class="nav-btn text-lg px-4 py-6">Home</div></router-link></li>
@@ -53,18 +53,17 @@
           type: Boolean,
           required: true
       },
-      isBlue: {
+      isBelowHero: {
           type: Boolean,
           required: true
       }
     },
 
-  data: function() {
-    return {
-      isOpen: false,
-    };
-  },
-
+    data: function() {
+      return {
+        isOpen: false,
+      };
+    },
 
     methods: {
       scrollToTop() {

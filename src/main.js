@@ -2,9 +2,9 @@ import { createApp } from 'vue';
 import { createWebHistory, createRouter } from 'vue-router';
 
 import App from './App.vue';
-import BaseHome from './pages/BaseHome.vue';
-import BaseWork from './pages/BaseWork.vue';
-import BaseAbout from './pages/BaseAbout.vue';
+import BaseHome from './pages/HomePage.vue';
+import BaseWork from './pages/WorkPage.vue';
+import BaseAbout from './pages/AboutPage.vue';
 import NotFound from './pages/NotFound.vue';
 
 import './css/main.css'

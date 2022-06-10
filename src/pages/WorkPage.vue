@@ -1,7 +1,7 @@
 <template>
 
     <!-- Nav control -->
-    <PageHeader :isMobile="isMobile" :isBlue="isBlue" />
+    <PageHeader :isMobile="isMobile" :isBelowHero="isBelowHero" />
 
     <!-- Hero area -->
     <div id="hero" class="flex items-center text-white bg-[#6facf2] w-full md:h-[450px]" :class="isMobile ? 'pt-24 pb-4': 'py-0'">
@@ -235,7 +235,7 @@ export default {
 
   data: function() {
     return {
-      isBlue: false,
+      isBelowHero: false,
       isMobile: false,
     };
   },
@@ -253,9 +253,9 @@ export default {
       handleScroll() {
         // if hero element is not in the DOM yet, use default of 335
         if (document.getElementById("hero"))
-          this.isBlue = window.pageYOffset > (document.getElementById("hero").clientHeight - 50)
+          this.isBelowHero = window.pageYOffset > (document.getElementById("hero").clientHeight - 50)
         else
-          this.isBlue = window.pageYOffset > 335
+          this.isBelowHero = window.pageYOffset > 335
       },
   },
 

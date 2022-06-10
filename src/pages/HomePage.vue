@@ -1,30 +1,30 @@
 <template>
   <!-- Non-mobile display -->
   <div v-if="!isMobile" class="flex">
-    <PageHeader :isMobile="isMobile" :isBlue=false />
+    <PageHeader :isMobile="isMobile" :isBelowHero=false />
     <div class="flex flex-col basis-2/5 h-screen px-4 pt-12 pb-20">
-        <div class="container-inner flex flex-col grow mx-auto">
-          <div class="basis-1/5 pb-8 lg:pb-12">
-            <img src="../assets/nate-williams-logo-200.svg" alt="nate-williams-logo" width="200" />
+      <div class="container-inner flex flex-col grow mx-auto">
+        <div class="basis-1/5 pb-8 lg:pb-12">
+          <img src="../assets/nate-williams-logo-200.svg" alt="nate-williams-logo" width="200" />
+        </div>
+        <div class="basis-4/5">
+          <div class="text-3xl xl:text-4xl font-bold uppercase text-textblue space-y-4 pb-10">
+            <p>Startup founder</p>
+            <p>Developer &</p>
+            <p>Designer</p>
           </div>
-          <div class="basis-4/5">
-            <div class="text-3xl xl:text-4xl font-bold uppercase text-textblue space-y-4 pb-10">
-              <p>Startup founder</p>
-              <p>Developer &</p>
-              <p>Designer</p>
-            </div>
-            <div class="prose pb-10">
-                Web software entrepreneur who loves innovative tech, large-scale art and backcountry treks.
-                Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
-                and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation, and code.
-            </div>
-            <SocialMediaLinks :isHome="true" class="pb-12" />
-            <button class="section-btn-lg hover:bg-blue-400 hover:bg-opacity-20 pb-10" @click="btnSendEmail">Get in touch</button>
-            <div class="footer-container">
-              <PageFooter class="absolute flex bottom-0 mb-4" />
-            </div>
+          <div class="prose pb-10">
+              Web software entrepreneur who loves innovative tech, large-scale art and backcountry treks.
+              Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
+              and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation, and code.
+          </div>
+          <SocialMediaLinks :isHome="true" class="pb-12" />
+          <button class="section-btn-lg hover:bg-blue-400 hover:bg-opacity-20 pb-10" @click="btnSendEmail">Get in touch</button>
+          <div class="footer-container">
+            <PageFooter class="absolute flex bottom-0 mb-4" />
           </div>
         </div>
+      </div>
     </div>
     <div class="flex flex-col basis-3/5">
       <ImageCarousel :images="images" :content="content" :isMobile="isMobile" />
@@ -32,7 +32,7 @@
   </div>
   <!-- Mobile display -->
   <div v-else>
-    <PageHeader :isMobile="isMobile" :isBlue=false />
+    <PageHeader :isMobile="isMobile" :isBelowHero=false />
     <div class="container-inner mx-auto py-8">
       <div>
         <div class="text-3xl sm:text-4xl font-bold uppercase text-textblue space-y-4 pt-20 pb-10">
@@ -41,10 +41,9 @@
           <p>Designer</p>
         </div>
         <div class="prose pb-8">
-            Web software entrepreneur who loves <a href="https://vitejs.dev/" target="_blank">amazing tech</a>,
-            <a href="https://davidwallacehaskins.com/" target="_blank">large-scale art</a>
-            and backcountry treks. Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
-            and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation and code.
+            Web software entrepreneur who loves innovative tech, large-scale art and backcountry treks.
+            Formerly Co-founder & CEO at <a href="https://flexio.natewilliams.dev" target="_blank">Flex.io</a>
+            and <a href="https://goldprairie.natewilliams.dev" target="_blank">Gold Prairie</a>. Passionate about community, conservation, and code.
         </div>
         <div class="flex justify-center"><SocialMediaLinks :isHome="true" class="pb-10" /></div>
         <div class="flex justify-center"><button class="section-btn-sm hover:bg-blue-400 hover:bg-opacity-20 pb-8" @click="btnSendEmail">Get in touch</button></div>
