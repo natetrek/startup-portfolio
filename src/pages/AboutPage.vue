@@ -20,7 +20,7 @@
     <div class="container-inner flex flex-col md:flex-row mx-2 md:mx-auto py-12">
         <div class="prose max-w-none space-y-4 my-4">
           <div>Hi, I'm Nate. Thanks for stopping by. I'm a web software entrepreneur, developer and UI/UX designer.</div>
-          <div>I co-founded three enterprise software startups where I led product development and managed all aspects of the product lifecycle. In different ways, all three ventures focused on data preparation, data analysis and creating value with data resources:</div>
+          <div>I've co-founded three enterprise software startups where I led product development and managed all aspects of the product lifecycle. In different ways, all three ventures focused on data preparation, data analysis and creating value with data resources:</div>
           <ul class="space-y-2 pl-8 md:pl-16">
             <li><router-link to="/work#flexio">Flex.io</router-link> was about getting data from the cloud into spreadsheets simply by typing a formula</li>
             <li><router-link to="/work#goldprairie">Gold Prairie</router-link> pinpointed payment errors by analyzing large volumes of corporate financial data</li>
