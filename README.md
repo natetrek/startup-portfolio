@@ -1,7 +1,15 @@
-# Vue 3 + Vite
+# Welcome to my startup portfolio
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Hi, I'm Nate. Thanks for stopping by. I'm a web software entrepreneur, developer and UI/UX designer.
+I've co-founded three enterprise software startups. This startup portfolio website is here to tell the story.
 
-## Recommended IDE Setup
+You can find the live site on the web here: [https://natewilliams.dev/]https://natewilliams.dev/).
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## About this site
+
+This site is built with Vue 3 and Tailwind CSS, with Vite as the build tool. Can find out more about these popular web development technologies here:
+
+- [Vue 3](https://vuejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+
