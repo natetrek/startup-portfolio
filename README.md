@@ -7,7 +7,7 @@ You can find the live site here: [https://natewilliams.dev/](https://natewilliam
 
 ## About this site
 
-This site is built with Vue 3 and Tailwind CSS, with Vite as the build tool. Can find out more about these popular web development technologies here:
+I built this site with Vue 3 and Tailwind CSS, with Vite as the build tool. Can find out more about these popular web development technologies here:
 
 - [Vue 3](https://vuejs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
