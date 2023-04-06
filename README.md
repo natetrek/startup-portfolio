@@ -3,7 +3,7 @@
 Hi, I'm Nate. Thanks for stopping by. I'm a web software entrepreneur, developer and UI/UX designer.
 I've co-founded three enterprise software startups. This startup portfolio website is here to tell the story.
 
-You can find the live site on the web here: [https://natewilliams.dev/]https://natewilliams.dev/).
+You can find the live site here: [https://natewilliams.dev/](https://natewilliams.dev/).
 
 ## About this site
 
