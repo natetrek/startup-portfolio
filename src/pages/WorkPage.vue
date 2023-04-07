@@ -41,8 +41,8 @@
       <div class="basis-2/3">
         <div class="space-y-2">
           <div class="text-xl font-bold">Flex.io</div>
-          <div>#NoCode platform for delivering data from cloud apps to spreadsheets</div>
-          <div>Launched at PyCon Startup Row in 2017 and operated through 2020</div>
+          <div>#NoCode platform for delivering data from cloud apps to spreadsheets.</div>
+          <div>Launched at PyCon Startup Row in 2017 and operated through 2020.</div>
         </div>
       </div>
     </div>
@@ -97,8 +97,8 @@
       <div class="basis-2/3">
         <div class="space-y-2">
           <div class="text-xl font-bold">Gold Prairie</div>
-          <div>Enterprise SaaS solution for identifying and preventing payment errors</div>
-          <div>Exited in 2019 via a private sale</div>
+          <div>Enterprise SaaS solution for identifying and preventing payment errors.</div>
+          <div>Exited in 2019 via a private sale.</div>
         </div>
       </div>
     </div>
@@ -159,8 +159,8 @@
       <div class="basis-2/3">
         <div class="space-y-2">
           <div class="text-xl font-bold">Kirix</div>
-          <div>Productivity application for data preparation and ad hoc data analysis</div>
-          <div>Awarded “Best Productivity Application” at LinuxWorld Boston 2005</div>
+          <div>Productivity application for data preparation and ad hoc data analysis.</div>
+          <div>Awarded “Best Productivity Application” at LinuxWorld Boston 2005.</div>
         </div>
       </div>
     </div>
