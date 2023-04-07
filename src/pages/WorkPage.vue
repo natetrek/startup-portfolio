@@ -21,7 +21,7 @@
         <div class="prose max-w-none space-y-4 pt-4">
           <div>Welcome to a brief tour of my startup experience.</div>
           <div>
-            I led product development, built nifty, new things, and kept customers happy at three enterprise software startups:
+            I led product development and kept customers happy at three enterprise software startups:
             <router-link to="/work#flexio">Flex.io</router-link>,
             <router-link to="/work#goldprairie">Gold Prairie</router-link>, and
             <router-link to="/work#kirix">Kirix</router-link>.
