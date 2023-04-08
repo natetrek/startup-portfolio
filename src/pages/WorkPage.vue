@@ -124,7 +124,7 @@
           <div class="font-bold pt-4">Highlights</div>
           <div>Gold Prairie delivered great results and this led to many long-term relationships with our customers (5+ years). Additional things I'm proud of include:</div>
           <ul class="space-y-4 pl-8">
-            <li>Deploying the solution at 30+ enterprise customers, including
+            <li>Deploying the solution at 40+ enterprise customers, including
               <a href="https://www.astellas.com/en/" target="_blank">Astellas Pharma</a>,
               <a href="https://www.redcross.org/" target="_blank">American Red Cross</a>,
               <a href="https://www.condenast.com/" target="_blank">Condé Nast</a>,
